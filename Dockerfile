@@ -1,17 +1,22 @@
-FROM node:lts
+FROM node:20-slim
 
-RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg imagemagick webp && apt-get clean && rm -rf /var/lib/apt/lists/*
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    ffmpeg \
+    chromium \
+    imagemagick \
+    graphicsmagick \
+    webp \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
+# Copy package files and install dependencies
 COPY package*.json ./
+RUN npm install --production --legacy-peer-deps
 
-RUN npm install --production --legacy-peer-deps && npm cache clean --force
-
+# Copy the rest of the application
 COPY . .
 
-EXPOSE 3000
-
-ENV NODE_ENV production
-
-CMD ["node", "--max-old-space-size=512", "--optimize-for-size", "index.js"]
+# Start the bot
+CMD ["node", "index.js"]

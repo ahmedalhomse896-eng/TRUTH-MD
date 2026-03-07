@@ -1,1 +1,1 @@
-worker: node --max-old-space-size=512 --optimize-for-size index.js
+web: node --max-old-space-size=1024 --optimize-for-size --gc-interval=100 index.js

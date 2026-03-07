@@ -32,6 +32,7 @@
     "@ffmpeg/ffmpeg": "^0.12.15",
     "@hapi/boom": "^10.0.1",
     "@octokit/rest": "^22.0.1",
+    "@replit/connectors-sdk": "^0.2.0",
     "@types/node": "^20.0.0",
     "@whiskeysockets/baileys": "^7.0.0-rc.9",
     "adm-zip": "^0.5.16",
