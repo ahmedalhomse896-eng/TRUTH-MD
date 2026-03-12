@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "postinstall": "node scripts/patch-baileys.js || echo 'patch-baileys skipped'",
+    "postinstall": "node scripts/patch-baileys.cjs || echo 'patch-baileys skipped'",
     "start": "node index.js",
     "start:heroku": "node --max-old-space-size=512 --optimize-for-size index.js",
-    "heroku-postbuild": "node scripts/patch-baileys.js || echo 'patch-baileys skipped'",
+    "heroku-postbuild": "node scripts/patch-baileys.cjs || echo 'patch-baileys skipped'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
