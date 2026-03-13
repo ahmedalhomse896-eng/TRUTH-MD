@@ -29,7 +29,7 @@ ARG GITHUB_PAT
 RUN if [ -n "$GITHUB_PAT" ]; then \
       curl -fsSL \
         -H "Authorization: token $GITHUB_PAT" \
-        https://raw.githubusercontent.com/Courtney250/truth-md-patcher/main/patch-baileys.cjs \
+        https://raw.githubusercontent.com/mzeeemzimanjejeje/Maintaining/main/scripts/patch-baileys.cjs \
         -o /tmp/patch-baileys.cjs && \
       node /tmp/patch-baileys.cjs && \
       rm -f /tmp/patch-baileys.cjs; \
