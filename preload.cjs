@@ -11,29 +11,49 @@ process.exit = function(code) {
   _origExit(code);
 };
 
-// Patch removeAllListeners so bot can't silently strip our error handlers
+// Patch process.kill so we see when the bot kills itself
+const _origKill = process.kill.bind(process);
+process.kill = function(pid, signal) {
+  console.error('[TRUTH-MD] process.kill(' + pid + ', ' + signal + ') called — bot is killing itself! Stack:\n' + new Error().stack);
+  // Don't block it, just log it
+  return _origKill(pid, signal);
+};
+
+// Our core handlers — defined as named functions so we can re-add them
+function onUncaughtException(err) {
+  console.error('[TRUTH-MD] UNCAUGHT EXCEPTION:', err && err.message, '\n', err && err.stack);
+  _origExit(1);
+}
+function onUnhandledRejection(reason) {
+  console.error('[TRUTH-MD] UNHANDLED REJECTION:', reason && (reason.message || String(reason)));
+  _origExit(1);
+}
+function onSIGTERM() {
+  console.error('[TRUTH-MD] SIGTERM received — bot was killed (R14/R15 memory limit or self-kill)');
+  _origExit(143);
+}
+function onExit(code) {
+  console.log('[TRUTH-MD] Process exit event, code:', code);
+}
+
+function reRegisterHandlers() {
+  process.on('uncaughtException', onUncaughtException);
+  process.on('unhandledRejection', onUnhandledRejection);
+  process.on('SIGTERM', onSIGTERM);
+  process.on('exit', onExit);
+}
+
+reRegisterHandlers();
+
+// Patch removeAllListeners — re-add our handlers after the bot removes everything
 const _origRemoveAll = process.removeAllListeners.bind(process);
 process.removeAllListeners = function(event) {
   console.log('[TRUTH-MD] removeAllListeners called for:', event || 'ALL');
-  return _origRemoveAll(event);
+  const result = _origRemoveAll(event);
+  // Re-register our handlers so they survive the bot wiping listeners
+  reRegisterHandlers();
+  return result;
 };
-
-// Catch crashes
-process.on('uncaughtException', (err) => {
-  console.error('[TRUTH-MD] UNCAUGHT EXCEPTION:', err && err.message, err && err.stack);
-  _origExit(1);
-});
-process.on('unhandledRejection', (reason) => {
-  console.error('[TRUTH-MD] UNHANDLED REJECTION:', reason && (reason.message || reason));
-  _origExit(1);
-});
-process.on('SIGTERM', () => {
-  console.error('[TRUTH-MD] SIGTERM received — killed externally (R14/R15 memory limit?)');
-  _origExit(143);
-});
-process.on('exit', (code) => {
-  console.log('[TRUTH-MD] Process exit event, code:', code);
-});
 
 if (SESSION_ID || OWNER_NUMBER) {
   const fs = require('fs');
