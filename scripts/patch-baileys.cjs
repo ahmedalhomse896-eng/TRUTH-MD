@@ -664,6 +664,67 @@ function patchGroupDetectionSafety() {
     }
 }
 
+function patchGroupSendRetry() {
+    const xsqlite3Dir = path.join(__dirname, '..', 'node_modules', 'xsqlite3');
+    let relayFile = null;
+    function findRelayIdx(dir, depth) {
+        if (depth > 60) return null;
+        try {
+            const entries = fs.readdirSync(dir);
+            for (const entry of entries) {
+                const full = path.join(dir, entry);
+                if (entry === 'index.js') {
+                    const c = fs.readFileSync(full, 'utf-8');
+                    if (c.includes('AUTOFONT') && c.includes('_origSendMessage')) return full;
+                }
+                try {
+                    if (fs.statSync(full).isDirectory()) {
+                        const found = findRelayIdx(full, depth + 1);
+                        if (found) return found;
+                    }
+                } catch (_) {}
+            }
+        } catch (_) {}
+        return null;
+    }
+    relayFile = findRelayIdx(xsqlite3Dir, 0);
+    if (!relayFile) { console.log('[patch-baileys] relay index.js for group send retry not found'); return; }
+
+    let code = fs.readFileSync(relayFile, 'utf-8');
+    if (code.includes('// [PATCHED] group send retry')) {
+        console.log('[patch-baileys] group send retry already patched');
+        return;
+    }
+
+    // Patch the AUTOFONT wrapper to retry group sends once after 3 seconds on failure
+    const orig = `        return _origSendMessage(jid, content, options);
+    };`;
+    const patched = `        // [PATCHED] group send retry - retry group sends once on failure (Signal session warmup)
+        if (typeof jid === 'string' && jid.endsWith('@g.us')) {
+            try {
+                return await _origSendMessage(jid, content, options);
+            } catch (e1) {
+                try {
+                    await new Promise(r => setTimeout(r, 3000));
+                    return await _origSendMessage(jid, content, options);
+                } catch (e2) {
+                    console.error('[TRUTH-MD] group sendMessage retry also failed:', e2.message || e2);
+                    throw e2;
+                }
+            }
+        }
+        return _origSendMessage(jid, content, options);
+    };`;
+
+    if (code.includes(orig)) {
+        code = code.replace(orig, patched);
+        fs.writeFileSync(relayFile, code, 'utf-8');
+        console.log('[patch-baileys] group send retry patched - group replies will retry once on failure');
+    } else {
+        console.log('[patch-baileys] group send retry - pattern not matched');
+    }
+}
+
 function patchOsslDecryptError() {
     const xsqlite3Dir = path.join(__dirname, '..', 'node_modules', 'xsqlite3');
     let relayIndexFile = null;
@@ -770,5 +831,6 @@ patchOwnerAlwaysAccess();
 patchConnectionMessageReliable();
 patchMenuPhoneNumber();
 patchGroupDetectionSafety();
+patchGroupSendRetry();
 patchOsslDecryptError();
 console.log('[patch-baileys] Done.');
